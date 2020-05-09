@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 body{
     margin: 0px;
     background-color:white;
@@ -5,32 +9,44 @@ body{
 }
 h1{
     margin-top: 50px;
-    font-size: 50px;
+    font-size: 90px;
 }
 h2{
     color: #ea5455;
     font-weight: bold;
+    text-align: center;
 }
 h3{
     color: #ea5455;
     font-weight: bold;
-    font-weight: normal;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: gray;
 }
-a{
+/* a{
     color:black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 10px 20px;
     text-shadow: brown;
     text-decoration: none;
     font-size: 20px;
-}
-.footer-link{
+} */
+
+.my-footer-link{
+    color:black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 20px;
+    text-shadow: brown;
+    text-decoration: none;
+    font-size: 20px;
     margin: 20px 20px 20px auto ;
 }
-a:hover{
+
+.my-footer-link:hover{
+    text-decoration: none;
     color:white;
 }
-hr{
+.myhr{
     border-color: black;
     border-style:  none;
     border-top-style: dotted;
@@ -43,12 +59,14 @@ hr{
     margin: 20px auto 5px auto;
     color: blanchedalmond;
 }
-.container{
+
+/* Top Intro Content */
+.mycontainer{
     background-color:  #ea5455;
     font-size: 20px;
     margin: 0px;
     position: relative;
-    mix-blend-mode: screen;
+    /* mix-blend-mode: screen; */
     padding: 5px;
     text-align: center;
     height: 300px;
@@ -58,29 +76,48 @@ hr{
     text-decoration: underline;
 } */
 
+
 .middle{
     font-size: 25px;
 }
+
+
 .aboutme{
     width: 30%;
     margin: auto;
     text-align: center;
 }
+
+.contact-me{
+    text-align: center;
+}
+
+.profile{
+    text-align: center;
+}
+
 .bottom{
     position: relative;
     height: 100px;
     padding: 10px 0 5px;
     /* margin-top: 10px; */
+    text-align: center;
+    margin-left: -50vw;
     margin: 0px;
+    /* width: 100%; */
     background-color: #ea5455;
 }
+
+
 .skill-row{
-    width: 50%;
+    width: 70%;
     margin: 100px auto 100px auto;
     /* align-self: center; */
     text-align: left;
     line-height: 1.5;
 }
+
+
 .tiger{
     height: 300px;
     width: 300px;
@@ -89,57 +126,82 @@ hr{
     border-radius: 100%;
     border-width: 4px;
 }
+
+/* Skills image */
+.c{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 40px;
+    float: left;
+    border: solid;
+    border-width: 4px;    
+}
+
 .java{
-    height: 150px;
-    width: 150px;
+    height: 170px;
+    width: 170px;
     border-radius: 40%;
     margin-right: 20px;
+    margin-top: 40px;
     float: left;
     border: solid;
     border-width: 4px;
 }
+
+.skill-text-java{
+    text-align: right;
+}
+
 .python{
-    height: 150px;
-    width: 150px;
+    height: 170px;
+    width: 170px;
     float: right;
     margin-left: 20px;
     border-radius: 100%;
     border: solid;
     border-width: 4px;
 }
+
+.skill-text-python{
+    text-align: left;
+}
+
 .forText{
     position: absolute;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    top: 10%;
+    top: 25%;
     bottom: 30%;
     left: 30%;
     line-height: 40px;
     right: 30%;
+    text-align: center;
 }
 .clouds{
     position: relative;
     width: 100%;
     height: 500px;
-    mix-blend-mode: screen;
+    /* mix-blend-mode: screen; */
 }
 .mountains{
     position: relative;
     width: 100%;
     height: 300px;
-    mix-blend-mode: screen;
+    /* mix-blend-mode: screen; */
 }
 
-.button {
+.mybutton {
     -moz-border-radius: 20px;
-    border-radius: 20px;
-    height: 5px;
+    border-radius: 40px;
+    height: 12px;
     line-height: 5px;
     color: #000000;
     font-family: Verdana;
-    width: 121px;
+    width: 170px;
     font-size: 16px;
     font-weight: 200;
-    padding: 10px;
+    padding: 13px;
     background-color: #EA5455;
     box-shadow: 1px 1px 20px 0px #000000;
     -webkit-box-shadow: 1px 1px 20px 0px #000000;
@@ -151,7 +213,7 @@ hr{
     margin: 20px auto 20px auto;
     }
     
-    .button:hover {
+    .mybutton:hover {
     border: groove #DD380D 1px;
     background: #E53747;
     background-image: -webkit-linear-gradient(top, #E53747, #93232B);
@@ -163,4 +225,5 @@ hr{
     -moz-border-radius: 22px;
     border-radius: 22px;
     text-decoration: none;
+    color: linen;
     }

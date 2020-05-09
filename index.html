@@ -2,51 +2,119 @@
     <title>Dushyant</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="favicon.ico">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
+  <!-- Top Intro -->
+    <div class="mycontainer">
         <img class="mountains" src="images/desert_mountain.png" alt="Mountains shld be here !!">
         <div class="forText">
-            <h1>I am  Dushyant</h1>
-            <b>A <u>PROFESSIONAL</u> Programmer</b>
+            <h1 style="letter-spacing: 5px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">I am  Dushyant</h1>
+            <p style="letter-spacing: 10px; font-size: 20px;"><b>A <u>PROFESSIONAL</u> Programmer</b></p>
         </div>
     </div>
+
+    <!-- Navbar  -->
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#MySkills">My Skills <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contactme">Contact Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown09">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-md-0">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+      </nav>
+
+    <!-- Middle section content -->
+      <br><br>
     <div class="middle">
         <div class="profile">
             <img class="tiger" src="C:\Users\Lenovo\Desktop\web_developement\Personal_Site\tiger.jpg" alt="Thats me !!">
+            <br><br>
             <h2>Hello.</h2>
             <p class="aboutme">I am a tech enthuciast who likes to program in order to develope something substantial for the society.</p>
           </div>
-          <hr>
+
+          <hr class="myhr">
+          
           <div class="skills">
-            <h2>My Skills.</h2>
+            <h2 id="MySkills">My Skills.</h2>
             <div class="skill-row">
               <img class="java" src="images/java.png" alt="Java !!">
-              <h3>Java Programming</h3>
-              <p>Started Java programming in Second Year of my Graduation , I developed a sense for Object Oriented Programming and it was indeed an intresting experience programming in OOP's Concepts.</p>
+              <h3 style="letter-spacing: 3px;">Java Programming</h3>
+              <p class="skill-text-java">Started Java programming in Second Year of my Graduation , I developed a sense for Object Oriented Programming and it was indeed an intresting experience programming in OOP's Concepts.</p>
             </div>
             <div class="skill-row">
               <img class="python" src="images/python.png" alt="Python !!">
-              <h3>Python Programming</h3>
-              <p>Python is an interpreted high level programming language which is object oriented. It is very easy to code and understand it and its applications are majorily in ML asd AI.</p>
+              <h3 style="letter-spacing: 3px;">Python Programming</h3>
+              <p class="skill-text-python">Python is an interpreted high level programming language which is object oriented. It is very easy to code and understand it and its applications are majorily in ML asd AI.</p>
+            </div>
+            <div class="skill-row">
+              <img class="c" src="images/c.png" alt="C !!">
+              <h3 style="letter-spacing: 3px;">C Programming</h3>
+              <p class="skill-text-java">Started C programming in Second Year of my Graduation , I developed a sense for Competetitive Programming and it was indeed an intresting experience in programming of real life concepts.</p>
             </div>
           </div>
-          <hr>
-          <div class="contact-me">
+
+          <hr class="myhr">
+
+          <!-- Contact me Email Div  -->
+          <div class="contact-me" id="contactme">
             <h2>Get In Touch</h2>
             <h3>If you have any query or want to test my skills !</h3>
             <p>I will be obliged to help you out in any project which you consider requires my expertise.</p>
-            <a href="mailto:dushyantgoyal28@gmail.com" class="button">CONTACT ME</a>
+            <br>
+            <a href="mailto:dushyantgoyal28@gmail.com" class="mybutton">CONTACT ME</a>
           </div>
-        
+          <br> <br>
     </div>
-    <div class="bottom">
-        <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
-        <a class="footer-link" href="https://twitter.com/">Twitter</a>
-        <a class="footer-link" href="https://www.appbrewery.co/">Website</a>
+
+              <!-- Bottom footer -->
+
+    <!-- <div class="Bottom">
+        <a class="my-footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+        <a class="my-footer-link" href="https://twitter.com/">Twitter</a>
+        <a class="my-footer-link" href="https://www.appbrewery.co/">Website</a>
         <p class="copyright">© 2020 Dushyant Goyal.</p>
-    </div>
+    </div> -->
+
+    <footer class="footer mt-auto py-3">
+      <div class="Bottom">
+        <a class="my-footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+        <a class="my-footer-link" href="https://twitter.com/">Twitter</a>
+        <a class="my-footer-link" href="https://www.appbrewery.co/">Website</a>
+        <p class="copyright">© 2020 Dushyant Goyal.</p>
+        <!-- <span class="text-muted">Place sticky footer content here.</span> -->
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
