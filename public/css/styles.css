@@ -7,21 +7,49 @@ body{
     background-color:white;
     text-align: center;
 }
+
+.hero{
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.dushyant{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 13px;
+    font-family: 'Playfair Display SC', serif;
+}
+
 h1{
     margin-top: 50px;
     font-size: 90px;
+    letter-spacing: 2px;
     color: #2B60DE;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-h2{
-    color: #2B60DE;
-    font-weight: bold;
+
+.heading{
+    color: white;
     text-align: center;
-    letter-spacing: 2px;
+    font-size: 45px;
+    letter-spacing: 10px;
     font-family: 'Playfair Display SC', serif;
 }
+
 h3{
-    color: #2B60DE;
+    color: white;
     font-weight: bold;
     font-weight: bold;
     text-align: center;
@@ -57,32 +85,14 @@ h3{
 }
 
 /* Top Intro Content */
-.mycontainer{
-    font-size: 20px;
-    margin: 0px;
-    position: relative;
-    padding: 1px;
-    text-align: center;
-    height: 600px;
-    background-position: center;
-}
-
-.middle{
-    font-size: 25px;
-}
 
 .aboutme{
-    width: 30%;
-    margin: auto;
+    width: 70%;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 30px;
     text-align: center;
-}
-
-.contact-me{
-    text-align: center;
-}
-
-.profile{
-    text-align: center;
+    font-family: 'Satisfy', cursive;
 }
 
 .bottom{
@@ -100,8 +110,9 @@ h3{
 .tiger{
     width: 400px;
     height: 400px;
-    margin-top: 10px;
+    margin-top: 70px;
     margin-right: 10px;
+    margin-left: 200px;
     border: solid;
     border-radius: 100%;
     border-width: 4px;
@@ -142,20 +153,14 @@ h3{
     border-width: 4px;
 }
 
-.bg-image {
-    /* Full height */
-    height: 50%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 .imgskill{
     background-image: url('/images/skill2.jpg');
 }
 .imgprofile{
-    background-image: url('/images/profile.jpg');
+    background-image: url('/images/aboutme.jpg');
+}
+.imgAchieve{
+    background-image: url('/images/certi.jpg');
 }
 
 .forText{

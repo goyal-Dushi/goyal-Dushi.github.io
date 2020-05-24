@@ -3,40 +3,33 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5d102991fe.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 
 <body>
   <!-- Top Intro -->
-
-    <div class="mycontainer">
-      <div class="row">
-        <div class="col-6">
-          <img class="mountains" src="images/mysite.jpg" alt="Mountains shld be here !!">
-        </div>   
-        <!-- style="display: flex; align-items: center; -->
-        <div class="col-5 justify-content-center" style="align-items: center;">
-          <div class="row" style="margin-top: 200px;">
-            <div class="col">
-              <h1 class="display-4 font-weight-normal">I AM DUSHYANT</h1><br>
-            </div>
-            <div class="row">
-              <div class="col">
-                <p class="lead font-weight-normal">Welcome to my website. Get to know we better so that you can find some use for yourself.</p>
-              </div>
-            </div>
-          </div>
+  <section class="hero imgprofile">
+      <div class="row" style="margin-top: 10px;">
+        <div class="col col-sm-6">
+          <img class="tiger" id="top" src="images/myface.jpg" alt="Thats me !!">
+        </div>
+        <div class="col col-sm-6"> 
+          <h2 style="margin-top: 125px; margin-right: 45px;" class="dushyant">I AM DUSHYANT</h2>
+          <br>
+          <p class="aboutme" style="margin-left: 78px;">A tech enthuciast who likes to program in order to develope something substantial for the society.</p>
+          <br>
+          <a href="mailto:dushyantgoyal28@gmail.com"><button type="button" class="btn btn-primary btn-lg mr-4">Contact Me</button></a>
+          <a href="http://warm-dawn-99671.herokuapp.com/"><button type="button" class="btn btn-success btn-lg">Sign In To My Newsletter</button></a>
         </div>
       </div>
-    </div>
+  </section>
 
     <!-- Navbar  -->
-    <!-- <div class="container"> -->
       <nav class="navbar navbar-expand-lg fixed navbar-light rounded sticky-top" style="background-color: #e3f2fd;" id="mynavbar">
-        <a class="navbar-brand" href="#">DG</a>
+        <a class="navbar-brand" href="#top">DG</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -58,30 +51,17 @@
           </div>
         </div>
       </nav>
-  <!-- </div> -->
     <!-- Middle section content -->
-      <!-- <br><br> -->
+
     <div class="middle">
-      <div class="bg-img imgprofile">
-        <div class="profile">
-          <br><br>
-            <img class="tiger" id="top" src="images/myface.jpg" alt="Thats me !!">
+      <div class="imgskill" style="background-position: center;background-size: cover;">
+        <div class="container">
             <br><br>
-            <h2>Hello.</h2>
-            <p class="aboutme">I am a tech enthuciast who likes to program in order to develope something substantial for the society.</p>
-          <br>
-          </div>
-        </div>
-          <!-- <hr class="myhr"> -->
-<div class="bg-img imgskill">
-          
-          <div class="container">
-            <br><br>
-            <h2 id="MySkills">My Skills.</h2>
+            <h2 id="MySkills" class="heading">My Skills.</h2>
             <br>
             <div class="row">
               <div class="col col-sm-3">
-                <img class="row1" src="images/java1.png" alt="Java !!">
+                <img class="row1 wow bounceIn" src="images/java1.png" alt="Java !!">
               </div>
               <div class="col col-sm-3">
                 <img class="row1" src="images/javascript.png" alt="javascript !!">
@@ -123,18 +103,19 @@
                 <img class="row3" src="images/react.png" alt="bootstrap !!">
               </div>
             </div>
+            <!-- <br><br> -->
           </div>
           <br><br>
-</div>
-          <!-- <hr class="myhr"> -->
+          </div>
 
-          <!-- Achievements -->
-          <br>
+<div class="imgAchieve" style="background-position: center;background-size: cover;">
+          <!-- Achievements --> <br>
           <div class="container">
-          <h2 id="achievement">Achievements</h2>
+            <br>
+          <h2 id="achievement" class="heading">Achievements</h2>
           <br><br>
             <div class="row">
-              <div class="col">
+              <div class="col col-sm-3">
                 <img src="images/skills/CourseraHTML_CSS.jpg" height="170px" width="220px" data-toggle="modal" data-target="#CourseraHTML_CSS">
 
 <div class="modal fade" id="CourseraHTML_CSS" tabindex="-1" role="dialog" aria-labelledby="CourseraHTML_CSSLabel" aria-hidden="true">
@@ -154,7 +135,7 @@
 </div>
 
               </div>
-              <div class="col">
+              <div class="col col-sm-3">
                 <img src="images/skills/CourseraEmailMarketing.jpg" height="170px" width="220px" data-toggle="modal" data-target="#CourseraEmailMarketing">
 
 <div class="modal fade" id="CourseraEmailMarketing" tabindex="-1" role="dialog" aria-labelledby="CourseraEmailMarketingLabel" aria-hidden="true">
@@ -175,7 +156,7 @@
 
               </div>
 
-              <div class="col">
+              <div class="col col-sm-3">
                 <img src="images/skills/TCS_EMAIL.jpg" height="170px" width="220px" data-toggle="modal" data-target="#TCS_EMAIL">
 
 <div class="modal fade" id="TCS_EMAIL" tabindex="-1" role="dialog" aria-labelledby="TCS_EMAILLabel" aria-hidden="true">
@@ -196,7 +177,7 @@
 
               </div>
 
-              <div class="col">
+              <div class="col col-sm-3">
                 <img src="images/skills/TCS_lcokdown.jpg" height="170px" width="220px" data-toggle="modal" data-target="#TCS_lcokdown">
 
 <div class="modal fade" id="TCS_lcokdown" tabindex="-1" role="dialog" aria-labelledby="TCS_lcokdownLabel" aria-hidden="true">
@@ -217,14 +198,37 @@
 
               </div>
             </div>
+            <br><br>
+            <div class="row">
+              <div class="col col-sm-3">
+                <img src="images/skills/CourseraOOPJava.jpg" height="170px" width="220px" data-toggle="modal" data-target="#CourseraOOPJava">
+
+<div class="modal fade" id="CourseraOOPJava" tabindex="-1" role="dialog" aria-labelledby="CourseraOOPJavaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="CourseraOOPJava">Coursera : OOPS Concepts Using Java</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <img src="images/skills/CourseraOOPJava.jpg" alt="html" height="750px" width="900px">
+      </div>
+    </div>
+  </div>
+</div>
+              </div>
+
+            </div>
 
             <!-- Sports Achievements  -->
             <br><br>
 
-            <h4 style="color: #2B60DE;">Sports</h4>
+            <h4 style="color: white; font-size: 25px; letter-spacing: 2px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Sports</h4>
             <br>
             <div class="row">
-              <div class="col">
+              <div class="col col-sm-3">
                 <img src="images/cocurricular/100mts_national.jpg" height="210px" width="200px" data-toggle="modal" data-target="#hundred_national">
 
 <div class="modal fade" id="hundred_national" tabindex="-1" role="dialog" aria-labelledby="hundred_nationalLabel" aria-hidden="true">
@@ -244,7 +248,7 @@
 </div>
 
               </div>
-              <div class="col">
+              <div class="col col-sm-3">
                 <img src="images/cocurricular/200mt_national.jpg" height="210px" width="200px" data-toggle="modal" data-target="#two_national">
 
 <div class="modal fade" id="two_national" tabindex="-1" role="dialog" aria-labelledby="two_nationalLabel" aria-hidden="true">
@@ -265,7 +269,7 @@
 
               </div>
 
-              <div class="col">
+              <div class="col col-sm-3">
                 <img src="images/cocurricular/relay_National.jpg" height="210px" width="200px" data-toggle="modal" data-target="#relay_National">
 
 <div class="modal fade" id="relay_National" tabindex="-1" role="dialog" aria-labelledby="relay_NationalLabel" aria-hidden="true">
@@ -286,7 +290,7 @@
 
               </div>
 
-              <div class="col">
+              <div class="col col-sm-3">
                 <img src="images/cocurricular/100mt Spardha_1.jpg" height="170px" width="220px" data-toggle="modal" data-target="#onemtSpardha">
 
 <div class="modal fade" id="onemtSpardha" tabindex="-1" role="dialog" aria-labelledby="onemtSpardhaLabel" aria-hidden="true">
@@ -310,7 +314,7 @@
             <br><br>
 
             <div class="row">
-              <div class="col">
+              <div class="col col-sm-3">
                 <img src="images/cocurricular/200mt Spardha.jpg" height="170px" width="220px" data-toggle="modal" data-target="#twomtSpardha">
 
                 
@@ -331,7 +335,7 @@
 </div>          
               </div>
 
-              <div class="col">
+              <div class="col col-sm-3">
                 <img src="images/cocurricular/relay_vishwasariya_zonal.jpg" height="170px" width="220px" data-toggle="modal" data-target="#vishwasariya">
 
 <div class="modal fade" id="vishwasariya" tabindex="-1" role="dialog" aria-labelledby="vishwasariyaLabel" aria-hidden="true">
@@ -352,7 +356,7 @@
               </div>
 
               
-              <div class="col">
+              <div class="col col-sm-3">
                 <img src="images/cocurricular/relay_RKGIT_Zonal.jpg" height="210px" width="200px" data-toggle="modal" data-target="#RKGIT">
 
 <div class="modal fade" id="RKGIT" tabindex="-1" role="dialog" aria-labelledby="RKGITLabel" aria-hidden="true">
@@ -375,10 +379,10 @@
             </div>
             <br>
             <br>
-            <h4 style="color: #2B60DE;">Arts</h4>
+            <h4 style="color: white; font-size: 25px; letter-spacing: 2px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Arts</h4>
             <br>
             <div class="row">
-              <div class="col">
+              <div class="col col-sm-3">
                 <img src="images/cocurricular/Poster_ABES_zonal.jpg" height="170px" width="220px" data-toggle="modal" data-target="#ABES">
 
                 <!-- Modal -->
@@ -399,7 +403,7 @@
 </div>
 
               </div>
-              <div class="col">
+              <div class="col col-sm-3">
                 <img src="images/cocurricular/poster_IMS_zonal.jpg" height="210px" width="200px" data-toggle="modal" data-target="#IMS">
 
                 <!-- Modal -->
@@ -421,7 +425,7 @@
 
               </div>
 
-              <div class="col">
+              <div class="col col-sm-3">
                 <img src="images/cocurricular/Poster_KEC_zonal.jpg" height="170px" width="220px" data-toggle="modal" data-target="#KEC">
 
                 <!-- Modal -->
@@ -444,28 +448,18 @@
               </div>
             </div>
           </div>
-<br><br>
-          <hr class="myhr">
-
-
-          <!-- Contact me Email Div  -->
-          <div class="contact-me" id="contactme">
-            <h2>Get In Touch</h2>
-            <h3>If you have any query or want to test my skills !</h3>
-            <p>I will be obliged to help you out in any project which you consider requires my expertise.</p>
-            <br>
-            <a href="mailto:dushyantgoyal28@gmail.com" class="mybutton">CONTACT ME</a>
-          </div>
-          <br> <br>
+          <br><br>
     </div>
+          <!-- <hr class="myhr"> -->
 
-              <!-- Bottom footer -->
+              <!-- Bottom footer  "-->
 
     <footer class="footer mt-auto py-3">
-      <div class="Bottom">
-        <a class="my-footer-link" href="https://www.linkedin.com/">LinkedIn</a>
-        <a class="my-footer-link" href="https://twitter.com/">Twitter</a>
-        <a class="my-footer-link" href="https://www.appbrewery.co/">Website</a>
+      <div class="Bottom" id="contactme">
+        <a class="my-footer-link" href="https://www.linkedin.com/in/dushyant-goyal"><i class="fab fa-linkedin"></i></a>
+        <a class="my-footer-link" href="https://twitter.com/dushyantgoyal28?s=09"><i class="fab fa-twitter"></i></a>
+        <a class="my-footer-link" href="https://www.youtube.com/channel/UCodZAmwytlullevIHFEf9sA?view_as=subscriber"><i class="fab fa-youtube"></i></a>
+        <a href="mailto:dushyantgoyal28@gmail.com" class="my-footer-link"><i class="fas fa-envelope"></i></a>
         <p class="copyright">© 2020 Dushyant Goyal.</p>
       </div>
     </footer>

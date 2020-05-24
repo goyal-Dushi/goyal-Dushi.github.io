@@ -8,7 +8,6 @@ bodyParser.urlencoded({extended: true});
 
 
 app.use(express.static("public"));
-// app.use('/favicon.ico', express.static('public/images/favicon.ico'));
 app.use(favicon(path.join(__dirname, 'public','images', 'favicon.ico')));
 
 app.get('/', function(req, res){
