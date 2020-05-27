@@ -1,14 +1,13 @@
 const express = require("express");
+// import {express} from "express";
 const bodyParser = require("body-parser");
-const favicon = require("serve-favicon");
-const path = require("path")
+// import {bodyParser} from "body-parser";
+const path = require("path");
 
 const app = express();
 bodyParser.urlencoded({extended: true});
 
-
 app.use(express.static("public"));
-app.use(favicon(path.join(__dirname, 'public','images', 'favicon.ico')));
 
 app.get('/', function(req, res){
     res.sendFile(__dirname+'/index.html');

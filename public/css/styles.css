@@ -9,32 +9,6 @@ body{
     text-align: center;
 }
 
-.hero{
-    /* Sizing */
-    width: 100vw;
-    height: 100vh;
-    
-    /* Flexbox stuff */
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.dushyant{
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    height: 10vh;
-    width: 45vw;
-    font-size: 50px;
-    letter-spacing: 13px;
-    font-family: 'Playfair Display SC', serif;
-}
-
 h1{
     margin-top: 50px;
     font-size: 90px;
@@ -89,13 +63,36 @@ h3{
 
 /* Top Intro Content */
 
+.tiger{
+    width: 350px;
+    height: 350px;
+    margin-left: 150px;
+    margin-top: 5px;
+    border: solid;
+    border-radius: 100%;
+    border-width: 4px;
+}
+
 .aboutme{
-    width: 30vw;
-    letter-spacing: 3px;
+    width: 40vw;
+    letter-spacing: 5px;
     font-weight: bold;
-    font-size: 30px;
+    left: 190px;
+    position: relative;
+    font-size: 35px;
     text-align: center;
     font-family: 'Satisfy', cursive;
+}
+
+.dushyant{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    height: 10vh;
+    width: 100%;
+    font-size: 60px;
+    letter-spacing: 30px;
+    font-family: 'Playfair Display SC', serif;
 }
 
 .bottom{
@@ -106,16 +103,6 @@ h3{
     margin-left: -50vw;
     margin: 0px;
     background-color: #2B60DE;
-}
-
-.tiger{
-    width: 400px;
-    height: 400px;
-    margin-left: 150px;
-    margin-top: 100px;
-    border: solid;
-    border-radius: 100%;
-    border-width: 4px;
 }
 
 /* Skills image */
