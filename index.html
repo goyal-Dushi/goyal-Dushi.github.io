@@ -59,6 +59,11 @@
           </div>
         </div>
       </nav>
+
+    <div class="alert alert-success hide" id="alertId">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <strong>Success!</strong> Your message has been sent successfully.
+   </div>
     <!-- Middle section content -->
 
     <div class="middle">
@@ -126,7 +131,7 @@
 
 <div class="modal fade" id="CourseraHTML_CSS" tabindex="-1" role="dialog" aria-labelledby="CourseraHTML_CSSLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
+3    <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="CourseraHTML_CSSLabel">Static Website using HTML5 AND CSS3</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -521,18 +526,19 @@
                 <hr>
             </div>
             <div class="col-md-5">
-                <form>
+                <form action="/posted" method="POST">
                     <fieldset class="form-group">
-                        <input type="email" class="form-control" required id="exampleInputEmail1" placeholder="Enter email">
+                        <input type="email" class="form-control" required id="email" name="email" placeholder="Enter email">
                     </fieldset>
                     <fieldset class="form-group">
-                      <input type="tel" class="form-control" required id="exampleInputphone" pattern="^\d{5}-\d{5}$" placeholder="Phone Number">
+                      <!-- pattern="^\d{5}-\d{5}$" -->
+                      <input type="tel" class="form-control" required id="phone" name="phone" placeholder="Phone Number">
                   </fieldset>
                     <fieldset class="form-group">
-                        <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                        <textarea class="form-control" id="Message" name="message" placeholder="Message"></textarea>
                     </fieldset>
                     <fieldset class="form-group text-xs-right">
-                        <button type="button" class="btn btn-lg" style="background-color: #c5e3f8;">Send</button>
+                        <button type="submit" class="btn btn-lg btn-warning">Send</button>
                     </fieldset>
                 </form>
             </div>
