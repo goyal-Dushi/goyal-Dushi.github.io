@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 // import {express} from "express";
 const bodyParser = require("body-parser");
@@ -18,8 +19,8 @@ app.post('/posted',function(req,res){
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'dushyantgoyal28@gmail.com',
-          pass: 'Dushi@123$'
+          user: process.env.EMAIL,
+          pass: process.env.PASSWORD
         }
       });
       
@@ -27,7 +28,7 @@ app.post('/posted',function(req,res){
         from: req.body.email,
         to : 'dushyantgoyal28@gmail.com',
         message : req.body.message,
-        html:"<h1>Contact details</h1> <br> <h2> email:{req.body.email} </h2><br> <h2> phone number:{req.body.phone} </h2> <br> <h2> message:{req.body.message} </h2> </html>"
+        html:"<h1>Contact details</h1> <br> <h2> email: " +req.body.email+ "</h2><br> <h2> phone number: " +req.body.phone+ " </h2> <br> <h2> message: "+req.body.message+"</h2> </html>"
       };
 
       transporter.sendMail(mailOptions, function(error, info){
@@ -38,7 +39,7 @@ app.post('/posted',function(req,res){
             res.send(document.getElementById('alertId').classList.remove('hide'));
           console.log('Email sent : ' + info.response);
         //   res.send( 'email sent') ;
-        res.redirect(__dirname+'index.html');
+        // res.redirect(__dirname+'index.html');
         }
       });
       transporter.close();
