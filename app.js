@@ -51,6 +51,6 @@ app.get('/', function(req, res){
 //       transporter.close();
 // })
 
-app.listen(8080);{
+app.listen(process.env.PORT || 8080);{
     console.log("Server running on Port 8080")
 }
