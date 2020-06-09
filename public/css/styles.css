@@ -78,6 +78,7 @@ h3{
     letter-spacing: 5px;
     font-weight: bold;
     left: 190px;
+    color: #BF3EFF;
     position: relative;
     font-size: 35px;
     text-align: center;
@@ -89,13 +90,13 @@ h3{
 }
 
 .dushyant{
-    color: white;
+    color:black;
     text-align: center;
     font-weight: bold;
     height: 10vh;
     width: 100%;
     font-size: 60px;
-    letter-spacing: 30px;
+    letter-spacing: 20px;
     font-family: 'Playfair Display SC', serif;
 }
 
@@ -149,16 +150,8 @@ h3{
     background-image: url('/images/skill2.jpg');
 }
 .imgprofile{
-    background-image: url('/images/aboutme.jpg');
+    background-image: url('/images/profile.jpg');
 }
 .imgAchieve{
     background-image: url('/images/certi.jpg');
-}
-
-.forText{
-    height: 600px;
-    width: 300px;
-    position: relative;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    line-height: 40px;
 }
