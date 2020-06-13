@@ -20,8 +20,8 @@ h1{
 .heading{
     color: white;
     text-align: center;
-    font-size: 45px;
-    letter-spacing: 10px;
+    font-size: 40px;
+    letter-spacing: 4px;
     font-family: 'Playfair Display SC', serif;
 }
 
@@ -66,21 +66,19 @@ h3{
 .tiger{
     width: 350px;
     height: 350px;
-    margin-left: 150px;
-    margin-top: 5px;
-    border: solid;
+    padding-right: 15%;
+    margin-left: 30px;
+    margin-top: 25px;
+    margin-bottom: 30px;
     border-radius: 100%;
-    border-width: 4px;
 }
 
 .aboutme{
-    width: 40vw;
-    letter-spacing: 5px;
     font-weight: bold;
-    left: 190px;
+    left: 180px;
     color: #BF3EFF;
-    position: relative;
-    font-size: 35px;
+    margin-left: 20px;
+    font-size: 30px;
     text-align: center;
     font-family: 'Satisfy', cursive;
 }
@@ -95,8 +93,8 @@ h3{
     font-weight: bold;
     height: 10vh;
     width: 100%;
-    font-size: 60px;
-    letter-spacing: 20px;
+    font-size: 50px;
+    letter-spacing: 4px;
     font-family: 'Playfair Display SC', serif;
 }
 
