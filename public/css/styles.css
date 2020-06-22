@@ -66,17 +66,17 @@ h3{
 .tiger{
     width: 350px;
     height: 350px;
-    padding-right: 15%;
-    margin-left: 30px;
+    padding-right: 12%;
+    margin-left: 23px;
     margin-top: 25px;
     margin-bottom: 30px;
     border-radius: 100%;
 }
 
 .aboutme{
-    font-weight: bold;
     left: 180px;
-    color: #BF3EFF;
+    letter-spacing: 2px;
+    color: white;
     margin-left: 20px;
     font-size: 30px;
     text-align: center;
@@ -88,9 +88,9 @@ h3{
 }
 
 .dushyant{
-    color:black;
+    color:white;
     text-align: center;
-    font-weight: bold;
+    /* font-weight: bold; */
     height: 10vh;
     width: 100%;
     font-size: 50px;
@@ -115,8 +115,8 @@ h3{
     height: 170px;
     width: 170px;
     border-radius: 100%;
-    margin-right: 20px;
-    margin-left: 50px;
+    margin-right: 5%;
+    margin-left: 23%;
     margin-top: 40px;
     float: left;
     background-position: center;
@@ -128,7 +128,7 @@ h3{
     height: 170px;
     width: 170px;
     float: left;
-    margin-left: 50px;
+    margin-left: 23%;
     border-radius: 100%;
     border: solid;
     border-width: 4px;
@@ -138,7 +138,7 @@ h3{
     height: 170px;
     width: 170px;
     float: left;
-    margin-left: 50px;
+    margin-left: 23%;
     border-radius: 100%;
     border: solid;
     border-width: 4px;
@@ -148,8 +148,8 @@ h3{
     background-image: url('/images/skill2.jpg');
 }
 .imgprofile{
-    background-image: url('/images/profile.jpg');
+    background: linear-gradient(to left, #000000 36%, #c0c0c0 112%);
 }
 .imgAchieve{
-    background-image: url('/images/certi.jpg');
+    background: linear-gradient(to bottom, #9900cc 0%, #ff66cc 100%);
 }
