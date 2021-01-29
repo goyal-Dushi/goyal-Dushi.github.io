@@ -104,6 +104,27 @@ const courses = [{
       "Gained understanding of Communication, presentation and behavioural skills to create an impact in interviews and the workplace"
     ],
     imgSrc: courseURL + "TCS_lcokdown.jpg"
+  },
+  {
+    id : 3,
+    id_name : "Marketing",
+    name : "MyCaptain : Digital Marketing",
+    badges : [
+      "Digital Marketing", "SEM","Google Ads","Customer Targeting","SMM", "Facebook Ads",
+      "Instagram Ads", "Linkedin Marketing", "Email Marketing", "Mailchimp", "Copy Writing",
+      "Google Analytics"
+    ],
+    tasks : [
+      "Learned the basics and fundamentals of Digital Marketing",
+      "Chose a Product for Marketing and ran Marketing Campaigns for the same (Practical Exposure)",
+      "Understood the importance of Customer Targeting and gained deep insight into its working",
+      "Managed and learned the bidding system on Google Ads",
+      "Set up an Effective Email Drip Campaign",
+      "Created account on Mailchimp and ran Demo Campaigns",
+      "Did Wireframing for my Product to design Marketing Campaign",
+      "Understood Google Analytics and its usage in Digital Marketing and Customer Targeting"
+    ],
+    imgSrc : courseURL + "DigitalMarket.jpg"
   }
 ];
 
