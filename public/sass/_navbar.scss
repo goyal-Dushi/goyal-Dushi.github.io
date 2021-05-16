@@ -1,0 +1,43 @@
+nav{
+    position: fixed;
+    background-color:transparent;
+    z-index: 999;
+    width: 100%;
+    display: inline-block;
+    padding: 2.5% 10%;
+    color: white;
+    z-index: 999;
+
+    .brand-logo{
+        float: left;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        font-size: 2rem;
+        font-weight: 600;
+        // color: white;
+    }
+
+    .nav-content{
+        float: right;
+        width: 55%;
+        font-size: 1.3rem;
+        height: 100%;
+        
+        ul{
+            height: 100%;
+            // FLEX EVENLY
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+
+            a{
+                text-decoration: none;
+                color: white;
+                padding: 4px 10px;
+                transition: color 0.5s linear;
+            }
+        }
+    }
+}

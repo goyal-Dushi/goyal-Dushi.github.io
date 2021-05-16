@@ -305,9 +305,7 @@ const guidedContainer = document.querySelector(".guided-container");
 const iconContainer = document.querySelector('.icons-container');
 
 let skillList = skills.map(item => {
-  return `<div class="col-lg-3 col-md-4 pb-3 pt-2">
-      <img class="row1" src=${item.imgSrc} alt=${item.name} />
-  </div>`;
+  return `<li><img class="item-tag" src=${item.imgSrc} alt=${item.name} /></li>`;
 },[]).join("");
 iconContainer.innerHTML = skillList;
 
