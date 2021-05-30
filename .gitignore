@@ -116,6 +116,6 @@ dist
 .pnp.*
 
 #sass 
-.sass-cache/
+./public/sass/sass-cache/
 **/.css.map
 *.scss.map
