@@ -1,0 +1,57 @@
+
+.skill-section{
+    text-align: center;
+    padding: 3% 0%; 
+
+    h2{
+        font-size: 3rem;
+        text-transform: uppercase;    
+    }
+}
+
+.icons-container
+{
+    overflow-x: scroll;
+    display: flex;
+    padding: 3% 0%;
+    height: 30vh;
+
+    li{
+        list-style: none;   
+    }
+
+    img{
+        height: 150px;
+        width: 150px;
+        border: none;
+        backdrop-filter: blur(30px);
+        border-radius: 50%;
+        margin: 0 30px;
+        transition: all 0.5s linear;
+        box-shadow: 20px 20px 20px 5px rgba(0,0,0,0.4);
+    }
+
+    img:hover,
+    img:focus{
+        transform: scale(1.15);
+        box-shadow: 22px 22px 50px 2px rgba(255,255,255,0.2);
+    }
+}
+
+@media screen and (max-width:484px)
+{
+    .skill-section{
+        padding: 5% 0%;
+        h2{
+            font-size: 2.2rem;
+        }
+    }
+
+    .icons-container{
+        height: 20vh;
+        img{
+            height: 100px;
+            width: 100px;
+        }
+    }
+}
