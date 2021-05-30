@@ -3,7 +3,7 @@ const extrasURL = "./images/cocurricular/";
 const imgUrl = "./images/icons/";
 
 const skills = [
-  {
+  { 
     id : 1,
     imgSrc : imgUrl+"c2.jpg",
     name : "C Programming"
@@ -125,11 +125,9 @@ const courses = [{
       "Understood Google Analytics and its usage in Digital Marketing and Customer Targeting"
     ],
     imgSrc : courseURL + "DigitalMarket.jpg"
-  }
-];
-
-const guidedProjects = [{
-    id: 1,
+  },
+  {
+    id: 4,
     id_name: "GoogleAds",
     name: "Google Ads For Beginners",
     badges: [
@@ -147,7 +145,7 @@ const guidedProjects = [{
     imgSrc: courseURL + "CourseraGoogleAd.jpg"
   },
   {
-    id: 2,
+    id: 5,
     id_name: "Static",
     name: "Static Website using HTML5 AND CSS3",
     badges: [
@@ -161,7 +159,7 @@ const guidedProjects = [{
     imgSrc: courseURL + "CourseraHTML_CSS.jpg"
   },
   {
-    id: 3,
+    id: 6,
     id_name: "Email",
     name: "Email Marketing Using Mailchimp",
     badges: [
@@ -175,7 +173,7 @@ const guidedProjects = [{
     imgSrc: courseURL + "CourseraEmailMarketing.jpg"
   },
   {
-    id: 4,
+    id: 7,
     id_name: "TCS_EMAIL",
     name: "TCS iON: Email Etiquette",
     badges: [
@@ -189,7 +187,7 @@ const guidedProjects = [{
     imgSrc: courseURL + "TCS_EMAIL.jpg"
   },
   {
-    id: 5,
+    id: 8,
     id_name: "OOPS",
     name: "Coursera : OOPS Concepts Using Java",
     badges: [
@@ -203,7 +201,7 @@ const guidedProjects = [{
     imgSrc: courseURL + "CourseraJava.jpg"
   },
   {
-    id: 6,
+    id: 9,
     id_name: "Flask",
     name: "Web App Using Python and Flask",
     badges: [
@@ -216,20 +214,6 @@ const guidedProjects = [{
       "Used Templates in Flask applications"
     ],
     imgSrc: courseURL + "Coursera_Flask.jpg"
-  }
-];
-
-const otherCerti = [{
-    id: 1,
-    id_name: "Hackathon",
-    name: "Hackathon",
-    imgSrc: courseURL + "Hackathon.jpg"
-  },
-  {
-    id: 2,
-    id_name: "Robotic",
-    name: "Step Into Robotic Process Automation",
-    imgSrc: courseURL + "GuviCertification.png"
   }
 ];
 
@@ -297,179 +281,178 @@ const arts = [{
   }
 ];
 
-const posterContainer = document.querySelector(".posters");
-const sportsContainer = document.querySelector(".sports");
-const otherContainer = document.querySelector(".others");
-const coursesContainer = document.querySelector(".courses-container");
-const guidedContainer = document.querySelector(".guided-container");
+const body = document.querySelector('body');
+
+// HANDLING SKILL ICONS CONTAINER
 const iconContainer = document.querySelector('.icons-container');
 
 let skillList = skills.map(item => {
-  return `<li><img class="item-tag" src=${item.imgSrc} alt=${item.name} /></li>`;
+  return `<li><img src=${item.imgSrc} alt=${item.name} /></li>`;
 },[]).join("");
 iconContainer.innerHTML = skillList;
 
+// GETTING BADGES AND TASKS
 function getBadges(badge) {
   return `<span class="badge badge-pill badge-secondary p-2 mt-3">${badge}</span>`;
 }
-
 function getTask(task) {
   return `<li class="list-group-item">${task}</li>`
 }
 
+// HANDLING COURSE CONTAINER
+const coursesContainer = document.querySelector(".courses-container");
+
 let courseList = courses.map(course => {
   return `
-  <div class="col-lg-3 col-md-4 pb-4">
 
-    <img src=${course.imgSrc} height="170px" width="220px" data-toggle="modal" data-target=${"#"+course.id_name}>
-
-        <div class="modal fade" id=${course.id_name} tabindex="-1" role="dialog" aria-labelledby=${course.id_name} aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id=${course.id_name}>${course.name}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col">
-                    <h5>Skills I Developed</h5>
-                    ${course.badges.map(getBadges).join("")}
-                  </div>
-                  <div class="col">
-                    <h5>What I Did</h5>
-                    <ul class="list-group list-group-flush">
-                      ${course.tasks.map(getTask).join("")}
-                    </ul>
-                  </div>
-                </div>
-                  <img src=${course.imgSrc} alt=${course.id_name} height="100%" width="100%">
-              </div>
-            </div>
+    <div class="certi-img">
+    <img src=${course.imgSrc} height="170px" width="220px" >
+    <button type="button" class="img-modal-btn" name=${course.id_name} value=${course.id} > OPEN </button>
+    </div>
+    <div class="modal-wrapper" data-id=${course.id}>
+      <div class="modal-close" data-modal=${course.id}>
+          <div class="close-line"></div>
+        </div>
+      <div class="modal-container">
+      <div class="modal-title"> ${course.name} </div>
+          <img  src=${course.imgSrc} alt=${course.id_name} />
+        <div class="modal-content">
+          <h3>skills i gained</h3>
+          <div class="badges">
+            ${course.badges.map(getBadges).join("")}  
+          </div>
+          <h3>what i learned</h3>
+          <div class="learning-list">
+          <ol>
+          ${course.tasks.map(getTask).join("")}
+          </ol>
           </div>
         </div>
-
-  </div>
+    </div>
+    </div>
   `
 }, []).join("");
 coursesContainer.innerHTML = courseList;
+const openCourseModal = document.querySelectorAll('.img-modal-btn');
+const courseModal = document.querySelectorAll('.courses-container .modal-wrapper');
+const closeCourseModal = document.querySelectorAll('.courses-container .modal-close');
 
-let guidedList = guidedProjects.map(project => {
-  return `
-  <div class="col-lg-3 col-md-4 pb-4">
+openCourseModal.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    courseModal.forEach((modal) => {
+      if(modal.dataset.id == e.currentTarget.value){
+        modal.style.display = "block";
+        body.style.overflowY = "hidden";
+        // break;
+      }
+    });
+  });
+});
 
-    <img src=${project.imgSrc} height="170px" width="220px" data-toggle="modal" data-target=${"#"+project.id_name}>
+closeCourseModal.forEach((closeBtn) => {
+  closeBtn.addEventListener('click', (e) => {
+    courseModal.forEach((modal) => {
+      if(modal.dataset.id === e.currentTarget.dataset.modal){
+        modal.style.display = "none";
+        body.style.overflowY = "scroll";
+      }
+    });
+  });
+});
 
-        <div class="modal fade" id=${project.id_name} tabindex="-1" role="dialog" aria-labelledby=${project.id_name} aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id=${project.id_name}>${project.name}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col">
-                    <h5>Skills I Developed</h5>
-                    ${project.badges.map(getBadges).join("")}
-                  </div>
-                  <div class="col">
-                    <h5>What I Did</h5>
-                    <ul class="list-group list-group-flush">
-                    ${project.tasks.map(getTask).join("")}
-                    </ul>
-                  </div>
-                </div>
-                  <img src=${project.imgSrc} alt=${project.name} height="100%" width="100%">
-              </div>
-            </div>
-          </div>
-        </div>
-
-  </div>
-  `;
-}, []).join("");
-guidedContainer.innerHTML = guidedList;
-
-let otherList = otherCerti.map(certi => {
-  return `
-  <div class="col-lg-3 col-md-4 pb-4">
-
-    <img src=${certi.imgSrc} height="170px" width="220px" data-toggle="modal" data-target=${"#"+certi.id_name}>
-
-      <div class="modal fade" id=${certi.id_name} tabindex="-1" role="dialog" aria-labelledby=${certi.id_name} aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id=${certi.id_name}>${certi.name}</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <img src=${certi.imgSrc} alt=${certi.id_name} height="100%" width="100%">
-            </div>
-          </div>
-        </div>
-      </div>
-
-  </div>
-  `;
-}, []).join("");
-otherContainer.innerHTML = otherList;
+// HANDLING SPORTS CERTIFICATES
+const sportsContainer = document.querySelector(".sports-container");
 
 let sportsList = sports.map(sport => {
   return `
-  <div class="col-lg-3 col-md-4 pb-4">
-
-    <img src=${sport.imgSrc} height="210px" width="200px" data-toggle="modal" data-target=${"#"+sport.id_name}>
-
-        <div class="modal fade" id=${sport.id_name} tabindex="-1" role="dialog" aria-labelledby=${sport.id_name} aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id=${sport.id_name}>${sport.name}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                  <img src=${sport.imgSrc} alt=${sport.name} height="100%" width="100%">
-              </div>
-            </div>
-          </div>
+    <div class="certi-img">
+      <img src=${sport.imgSrc} height="170px" width="220px" >
+      <button type="button" class="img-modal-btn" name=${sport.id_name} value=${sport.id} > OPEN </button>
+    </div>
+    <div class="modal-wrapper" data-id=${sport.id}>
+      <div class="modal-container">
+        <h1> ${sport.name} </h1>
+        <div class="modal-close" data-modal=${sport.id}>
+          <div class="close-line"></div>
         </div>
-
-  </div>
+        <div class="modal-img">
+          <img  src=${sport.imgSrc} alt=${sport.id_name}>
+        </div>
+      </div>
+    </div>
   `;
 }, []).join("");
 sportsContainer.innerHTML = sportsList;
+const openSportModal = document.querySelectorAll('.sports-container .img-modal-btn');
+const sportModal = document.querySelectorAll('.sports-container .modal-wrapper');
+const closeSportModal = document.querySelectorAll('.sports-container .modal-close');
 
-let artsList = arts.map(item => {
-  return `<div class="col-lg-3 col-md-4 pb-4">
+openSportModal.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    sportModal.forEach((modal) => {
+      if(modal.dataset.id == e.currentTarget.value){
+        modal.style.display = "block";
+        body.style.overflowY = "hidden";
+      }
+    });
+  });
+});
 
-      <img src=${item.imgSrc} height="170px" width="220px" data-toggle="modal" data-target=${"#"+item.id_name}>
+closeSportModal.forEach((closeBtn) => {
+  closeBtn.addEventListener('click', (e) => {
+    sportModal.forEach((modal) => {
+      if(modal.dataset.id === e.currentTarget.dataset.modal){
+        modal.style.display = "none";
+        body.style.overflowY = "scroll";
+      }
+    });
+  });
+});
 
-        <div class="modal fade" id=${item.id_name} tabindex="-1" role="dialog" aria-labelledby=${item.id_name} aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id=${item.id_name}>${item.name}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                  <img src=${item.imgSrc} alt=${item.name} height="100%" width="100%">
-              </div>
-            </div>
-          </div>
+// HANDLING ARTS CONTENT
+const artsContainer = document.querySelector(".arts-container");
+let artsList = arts.map(art => {
+  return `
+    <div class="certi-img">
+    <img src=${art.imgSrc} height="170px" width="220px" >
+    <button type="button" class="img-modal-btn" name=${art.id_name} value=${art.id} > OPEN </button>
+    </div>
+    <div class="modal-wrapper" data-id=${art.id}>
+      <div class="modal-container">
+        <h1> ${art.name} </h1>
+        <div class="modal-close" data-modal=${art.id}>
+          <div class="close-line"></div>
         </div>
-
-    </div>`;
+        <div class="modal-img">
+          <img  src=${art.imgSrc} alt=${art.id_name}>
+        </div>
+      </div>
+    </div>
+  `;
 }, []).join("");
-posterContainer.innerHTML = artsList;
+artsContainer.innerHTML = artsList;
+const openArtModal = document.querySelectorAll('.arts-container .img-modal-btn');
+const artsModal = document.querySelectorAll('.arts-container .modal-wrapper');
+const closeArtModal = document.querySelectorAll('.arts-container .modal-close');
+
+openArtModal.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    artsModal.forEach((modal) => {
+      if(modal.dataset.id == e.currentTarget.value){
+        modal.style.display = "block";
+        body.style.overflowY = "hidden";
+      }
+    });
+  });
+});
+
+closeArtModal.forEach((closeBtn) => {
+  closeBtn.addEventListener('click', (e) => {
+    artsModal.forEach((modal) => {
+      if(modal.dataset.id === e.currentTarget.dataset.modal){
+        modal.style.display = "none";
+        body.style.overflowY = "scroll";
+      }
+    });
+  });
+});
