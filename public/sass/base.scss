@@ -21,6 +21,8 @@ time, mark, audio, video {
 
 body {
     line-height:1;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 article,aside,details,figcaption,figure,
@@ -99,6 +101,5 @@ input, select {
 }
 
 .body-wrapper{
-    overflow: hidden;
     position: relative;
 }

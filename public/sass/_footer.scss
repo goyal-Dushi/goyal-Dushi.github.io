@@ -2,8 +2,7 @@ footer{
     width: 100%;
     overflow: hidden;
     padding: 3% 10%;
-    position: absolute;
-    bottom: 0;
+    margin-bottom: 0;
     color: white;
     // FLEX COL CENTER
     display: flex;
@@ -13,7 +12,7 @@ footer{
 
     .footer-nav{
         display: flex;
-        width: 20%;
+        width: 10%;
         height: 100%;
         justify-content: space-around;
         align-items: center;
@@ -33,6 +32,14 @@ footer{
             .red:hover{
                 color: #f81212;
             }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    footer{
+        .footer-nav{
+            width: 20%;
         }
     }
 }

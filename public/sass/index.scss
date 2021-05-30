@@ -1,5 +1,7 @@
-@import "base.scss";
-@import "_navbar.scss";
-@import "_myprofile.scss";
-@import "_skills.scss";
-@import "_footer.scss";
+@import "./base.scss";
+@import "./navbar";
+@import "./myprofile";
+@import "./skills";
+@import "./footer";
+@import "./modal";
+@import "./certificates";
