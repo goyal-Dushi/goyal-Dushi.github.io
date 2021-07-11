@@ -120,3 +120,6 @@ dist
 **/.css.map
 *.scss.map
 .sass-cache/
+sass-cache 
+css.map
+scss.map                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
