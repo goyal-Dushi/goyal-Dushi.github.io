@@ -1,161 +1,159 @@
+.intro-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  padding: 100px 0;
+  // FLEX CENTER
+  display: flex;
+  justify-content: center;
 
-    .intro-wrapper{
-        position: relative;
+  .container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-img {
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+
+    img {
+      margin-top: 10%;
+      margin-right: 8%;
+      height: 80%;
+      width: 70%;
+    }
+  }
+
+  .content {
+    width: 60%;
+    height: 100%;
+    color: white;
+    padding: 15% 30px 20px;
+    // FLEX-COL-CENTER
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 4rem;
+      text-align: center;
+    }
+    p {
+      margin: 7% 20px 0px;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .btn-container {
+      width: 100%;
+      height: auto;
+      margin-top: 4%;
+      text-align: center;
+      // FLEX-WRAP-EVENLY
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-evenly;
+
+      a {
+        text-decoration: none;
+        padding: 10px 20px;
+        font-weight: 600;
+        color: white;
+        font-size: 1.2rem;
+        outline: white;
+        outline-style: solid;
+        outline-width: 1px;
+        margin: 2% 20px;
+        transition: all 0.4s linear;
+      }
+
+      a:hover,
+      a:focus {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .intro-wrapper {
+    .container {
+      padding: 0 0;
+    }
+
+    .profile-img {
+      width: 30%;
+      img {
+        height: 100%;
         width: 100%;
-        background-color: rgb(0,0,0);
-        padding: 100px 0;
-        // FLEX CENTER
-        display: flex;
-        justify-content: center;
-
-        .container{
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            padding: 0 10%;
-            display: flex;
-            justify-content: center;
-        }
-    
-        .profile-img{
-            width: 40%;
-            height: 100%;
-            text-align: center;
-            overflow: hidden;
-            
-            img{
-                margin-top: 10%;
-                margin-right: 8%;
-                height: 80%;
-                width: 70%;
-            }
-        }
-    
-        .content{
-            width: 60%;
-            height: 100%;
-            color: white;
-            padding: 15% 30px 20px;
-            // FLEX-COL-CENTER
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-    
-            h1{
-                text-transform: uppercase;
-                font-size: 4rem;
-                text-align: center;
-            }
-            p{
-                margin: 7% 20px 0px;
-                font-size: 1.5rem;
-                text-align: center;
-            }
-    
-            .btn-container{
-                width: 70%;
-                height: auto;
-                margin-top: 4%;
-                text-align: center;
-                // FLEX-WRAP-EVENLY
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: space-evenly;
-    
-                a{
-                    text-decoration: none;
-                    padding: 10px 20px;
-                    font-weight: 600;
-                    color: white;
-                    font-size: 1.2rem;
-                    outline: white;
-                    outline-style: solid;
-                    outline-width: 1px;
-                    margin: 4% 20px;
-                    transition: all 0.5s linear
-                }
-    
-                a:hover,
-                a:focus{
-                    background-color: white;
-                    color : black;
-                }
-            }
-        }
+        margin-top: 0%;
+      }
     }
 
-    @media screen and (max-width: 1250px){
-        .intro-wrapper{
-            .container{
-                padding: 0 0;
-            }
-
-            .profile-img{
-                width: 30%;
-                img{
-                    height: 100%;
-                    width: 100%;
-                    margin-top: 0%;
-                }
-            }
-
-            .content{
-                width: 70%;
-                .btn-container a{
-                    font-size: 0.9rem;
-                }
-            }
-        }
+    .content {
+      width: 70%;
+      .btn-container a {
+        font-size: 0.9rem;
+      }
     }
+  }
+}
 
-    @media screen and (max-width: 785px){
-        
-        .intro-wrapper{
-            .container{
-                flex-direction: column;
-                align-items: center;
-                padding: 0 8%;
-    
-                .profile-img{
-                    width: 500px;
-                    height: 500px;
-                    img{
-                        height: 100%;
-                        width: 60%;            }
-                }
-    
-                .content{
-                    width: auto;
-                    height: auto;
-                    padding: 15% 30px 20px;
-                }
-            }
+@media screen and (max-width: 785px) {
+  .intro-wrapper {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 8%;
+
+      .profile-img {
+        width: 500px;
+        height: 500px;
+        img {
+          height: 100%;
+          width: 60%;
         }
+      }
+
+      .content {
+        width: auto;
+        height: auto;
+        padding: 15% 30px 20px;
+      }
     }
+  }
+}
 
-    @media  screen and (max-width: 425px) {
+@media screen and (max-width: 425px) {
+  .intro-wrapper {
+    .container {
+      .profile-img {
+        height: 50%;
+        width: 100%;
 
-        .intro-wrapper{
-            .container{
-                .profile-img{
-                    height: 50%;
-                    width: 100%;
-
-                    img{
-                        height: 90%;
-                        width: 80%;
-                    }
-                }
-
-                .content{
-                    h1{
-                        font-size: 3rem;
-                    }
-                    p{
-                        font-size: 0.9rem;
-                    }
-                } 
-            }
+        img {
+          height: 90%;
+          width: 80%;
         }
+      }
+
+      .content {
+        h1 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
     }
+  }
+}

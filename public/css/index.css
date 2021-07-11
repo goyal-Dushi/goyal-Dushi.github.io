@@ -1,15 +1,72 @@
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -23,19 +80,31 @@ body {
   overflow-x: hidden;
   overflow-y: scroll; }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block; }
 
 nav ul {
   list-style: none; }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none; }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none; }
 
 a {
@@ -59,7 +128,8 @@ mark {
 del {
   text-decoration: line-through; }
 
-abbr[title], dfn[title] {
+abbr[title],
+dfn[title] {
   border-bottom: 1px dotted;
   cursor: help; }
 
@@ -75,7 +145,8 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
-input, select {
+input,
+select {
   vertical-align: middle; }
 
 *,
@@ -88,9 +159,13 @@ input, select {
 .body-wrapper {
   position: relative; }
 
+button,
+a {
+  cursor: pointer; }
+
 nav {
   position: fixed;
-  background-color: transparent;
+  background-color: black;
   z-index: 990;
   width: 100%;
   display: flex;
@@ -116,14 +191,12 @@ nav {
     nav .nav-content .nav-link {
       text-decoration: none;
       color: white;
-      border: none;
+      cursor: pointer;
       outline: none;
-      border-radius: 20px;
       padding: 5% 10%; }
-      nav .nav-content .nav-link:hover {
-        background-color: white;
-        color: black;
-        transition: all 0.5s linear; }
+      nav .nav-content .nav-link:hover, nav .nav-content .nav-link:focus {
+        border-bottom: 1px solid white;
+        padding-bottom: 5px; }
 
 .open-icon {
   position: absolute;
@@ -136,18 +209,18 @@ nav {
     height: 4px;
     background-color: white; }
     .open-icon .line::after {
-      content: '';
+      content: "";
       width: 28px;
       height: 4px;
-      position: absolute;
       background-color: inherit;
+      position: absolute;
       margin-top: 20px; }
     .open-icon .line::before {
-      content: '';
+      content: "";
       width: 28px;
       height: 4px;
-      position: absolute;
       background-color: inherit;
+      position: absolute;
       margin-top: 10px; }
 
 .close-icon {
@@ -159,9 +232,9 @@ nav {
     width: 30px;
     height: 4px;
     transform: rotateZ(-45deg);
-    background-color: black; }
+    background-color: white; }
     .close-icon .close-line::after {
-      content: '';
+      content: "";
       position: absolute;
       transform: rotateZ(-90deg);
       width: 30px;
@@ -176,20 +249,13 @@ nav {
       position: absolute;
       right: -100%;
       top: 0;
-      height: 95vh;
-      transition: all 0.5s linear;
+      height: 85vh;
+      transition: all 0.4s linear;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
       flex-direction: column;
-      background-color: white; }
-      nav .nav-content .nav-link {
-        color: black;
-        padding: 8% 12%;
-        background-color: transparent; }
-        nav .nav-content .nav-link:hover {
-          color: white;
-          background-color: black; }
+      background-color: black; }
 
   .open-icon {
     display: block; }
@@ -240,7 +306,7 @@ nav {
       font-size: 1.5rem;
       text-align: center; }
     .intro-wrapper .content .btn-container {
-      width: 70%;
+      width: 100%;
       height: auto;
       margin-top: 4%;
       text-align: center;
@@ -257,8 +323,8 @@ nav {
         outline: white;
         outline-style: solid;
         outline-width: 1px;
-        margin: 4% 20px;
-        transition: all 0.5s linear; }
+        margin: 2% 20px;
+        transition: all 0.4s linear; }
       .intro-wrapper .content .btn-container a:hover,
       .intro-wrapper .content .btn-container a:focus {
         background-color: white;
@@ -302,7 +368,7 @@ nav {
   .intro-wrapper .container .content h1 {
     font-size: 3rem; }
   .intro-wrapper .container .content p {
-    font-size: 0.9rem; } }
+    font-size: 1.2rem; } }
 .skill-section {
   text-align: center;
   padding: 3% 0%; }
@@ -351,14 +417,14 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   background-color: black; }
   footer .footer-nav {
     display: flex;
-    width: 10%;
+    width: 5%;
     height: 100%;
     justify-content: space-around;
-    align-items: center;
-    margin-bottom: 2%; }
+    align-items: center; }
     footer .footer-nav li {
       list-style: none; }
       footer .footer-nav li a {
@@ -375,14 +441,13 @@ footer {
   footer .footer-nav {
     width: 20%; } }
 .modal-wrapper {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
-  overflow-y: scroll;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(6px);
   display: none; }
   .modal-wrapper .modal-close {
@@ -401,7 +466,7 @@ footer {
       transform: rotateZ(-45deg);
       background-color: white; }
       .modal-wrapper .modal-close .close-line::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 30px;
         height: 4px;
@@ -413,19 +478,34 @@ footer {
   width: 100%;
   height: 100%;
   padding: 0% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   text-align: center; }
+  .modal-container .certi-link {
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    margin: 20px 0px;
+    border: 2px solid white;
+    border-radius: 10px; }
+    .modal-container .certi-link:hover {
+      color: black;
+      border: 2px solid black; }
   .modal-container .modal-title {
     font-size: 3rem;
     width: 100%;
+    margin: 20px 0px;
     height: fit-content;
     font-weight: 600;
     color: white; }
   .modal-container img {
-    width: 85%;
-    height: 75%;
-    outline: black;
-    margin-top: 4%; }
+    width: 600px;
+    height: 500px;
+    outline: black; }
   .modal-container .modal-content {
     width: 100%;
     margin-top: 3%;
@@ -440,7 +520,8 @@ footer {
 
 .badges {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: center; }
   .badges span {
     border: none;
     border-radius: 20px;
@@ -452,17 +533,35 @@ footer {
 
 .learning-list ol {
   padding-left: 20px;
-  font-size: 1.35rem;
+  font-size: 2rem;
   font-weight: 600;
-  text-align: left; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
   .learning-list ol li {
-    margin-top: 10px; }
+    margin-top: 10px;
+    font-size: 1.8rem; }
 
 @media screen and (max-width: 768px) {
   .modal-wrapper .modal-contianer .modal-title {
     font-size: 2.5rem; }
   .modal-wrapper .modal-contianer img {
-    height: 20%; } }
+    max-width: 400px;
+    height: 300px; }
+
+  .learning-list ol li {
+    font-size: 1.4rem; } }
+@media screen and (max-width: 600px) {
+  .modal-wrapper .modal-close {
+    margin-left: 85%; }
+  .modal-wrapper .modal-container .modal-title {
+    font-size: 2rem; }
+  .modal-wrapper .modal-container .modal-content h3 {
+    font-size: 1.5rem;
+    padding: 0; }
+  .modal-wrapper .modal-container img {
+    width: 315px; } }
 .certificates-wrapper {
   position: relative;
   height: fit-content;
@@ -527,9 +626,15 @@ footer {
       transition: all 0.5 ease-in-out; }
 
 .sports-wrapper {
-  background-color: black;
+  background-color: rgba(34, 32, 32, 0.829);
   color: white; }
   .sports-wrapper .certi-img {
-    box-shadow: 7px 7px 12px rgba(255, 255, 255, 0.5); }
+    box-shadow: 8px 8px 12px 8px rgba(0, 0, 0, 0.5); }
+
+@media screen and (max-width: 600px) {
+  .certificates-wrapper h1 {
+    font-size: 2rem; }
+  .certificates-wrapper h2 {
+    font-size: 1.5rem; } }
 
 /*# sourceMappingURL=index.css.map */
