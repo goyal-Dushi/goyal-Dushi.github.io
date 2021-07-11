@@ -21,7 +21,6 @@ app.get("/download", function (req, res) {
   );
 });
 
-app.listen(process.env.PORT || 8080);
-{
-  console.log("Server running on Port 8080");
-}
+app.listen(process.env.PORT || 8080, () => {
+  console.log("Server started on Port 8080");
+});
