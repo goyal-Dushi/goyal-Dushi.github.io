@@ -1,6 +1,6 @@
 .modal-wrapper {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@
         height: 4px;
         left: 0;
         transform: rotateZ(90deg);
-        background-color: yellow;
+        background-color: inherit;
       }
     }
   }
@@ -46,7 +46,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: relative;
   text-align: center;
 
@@ -81,7 +80,7 @@
 
   .modal-content {
     width: 100%;
-    margin-top: 3%;
+    // margin-top: 3%;
     padding: 0 0 3%;
     color: white;
     text-align: center;

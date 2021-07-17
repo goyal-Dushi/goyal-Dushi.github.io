@@ -302,11 +302,11 @@ let sportsList = cocurricular
       <button type="button" class="img-modal-btn" name=${sport.id_name} value=${sport.id} > OPEN </button>
     </div>
     <div class="modal-wrapper" data-id=${sport.id}>
-      <div class="modal-container">
-        <div class="modal-title" > ${sport.name} </div>
-        <div class="modal-close" data-modal=${sport.id}>
+    <div class="modal-close" data-modal=${sport.id}>
           <div class="close-line"></div>
         </div>
+      <div class="modal-container">
+        <div class="modal-title" > ${sport.name} </div>
         <div class="modal-img">
           <img  src=${sport.imgSrc} alt=${sport.id_name}>
         </div>

@@ -46,7 +46,7 @@
       text-align: center;
     }
     p {
-      margin: 7% 20px 0px;
+      margin: 20px 0px;
       font-size: 1.5rem;
       text-align: center;
     }
@@ -71,7 +71,7 @@
         outline: white;
         outline-style: solid;
         outline-width: 1px;
-        margin: 2% 20px;
+        margin: 15px 20px;
         transition: all 0.4s linear;
       }
 
@@ -101,14 +101,11 @@
 
     .content {
       width: 70%;
-      .btn-container a {
-        font-size: 0.9rem;
-      }
     }
   }
 }
 
-@media screen and (max-width: 785px) {
+@media screen and (max-width: 768px) {
   .intro-wrapper {
     .container {
       flex-direction: column;
@@ -116,8 +113,8 @@
       padding: 0 8%;
 
       .profile-img {
-        width: 500px;
-        height: 500px;
+        width: 420px;
+        height: 450px;
         img {
           height: 100%;
           width: 60%;
@@ -127,7 +124,7 @@
       .content {
         width: auto;
         height: auto;
-        padding: 15% 30px 20px;
+        padding: 30px 20px;
       }
     }
   }
@@ -152,6 +149,9 @@
         }
         p {
           font-size: 1.2rem;
+        }
+        .btn-container a {
+          font-size: 0.9rem;
         }
       }
     }
