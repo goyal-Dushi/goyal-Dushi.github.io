@@ -193,8 +193,7 @@ nav {
       text-decoration: none;
       color: white;
       cursor: pointer;
-      outline: none;
-      padding: 5% 10%; }
+      outline: none; }
       nav .nav-content .nav-link:hover, nav .nav-content .nav-link:focus {
         border-bottom: 1px solid white;
         padding-bottom: 5px; }
@@ -271,6 +270,7 @@ nav {
   width: 100%;
   background-color: black;
   padding: 100px 0;
+  height: 100vh;
   display: flex;
   justify-content: center; }
   .intro-wrapper .container {
@@ -288,7 +288,7 @@ nav {
     .intro-wrapper .profile-img img {
       margin-top: 10%;
       margin-right: 8%;
-      height: 80%;
+      height: 85%;
       width: 70%; }
   .intro-wrapper .content {
     width: 60%;
@@ -335,28 +335,30 @@ nav {
   .intro-wrapper .container {
     padding: 0 0; }
   .intro-wrapper .profile-img {
-    width: 30%; }
+    width: 40%; }
     .intro-wrapper .profile-img img {
-      height: 100%;
-      width: 100%;
+      height: 80%;
+      width: 80%;
       margin-top: 0%; }
   .intro-wrapper .content {
-    width: 70%; } }
+    width: 60%; } }
 @media screen and (max-width: 768px) {
-  .intro-wrapper .container {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 8%; }
-    .intro-wrapper .container .profile-img {
-      width: 420px;
-      height: 450px; }
-      .intro-wrapper .container .profile-img img {
-        height: 100%;
-        width: 60%; }
-    .intro-wrapper .container .content {
-      width: auto;
-      height: auto;
-      padding: 30px 20px; } }
+  .intro-wrapper {
+    height: auto; }
+    .intro-wrapper .container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 8%; }
+      .intro-wrapper .container .profile-img {
+        width: 420px;
+        height: 450px; }
+        .intro-wrapper .container .profile-img img {
+          height: 100%;
+          width: 60%; }
+      .intro-wrapper .container .content {
+        width: auto;
+        height: auto;
+        padding: 30px 20px; } }
 @media screen and (max-width: 425px) {
   .intro-wrapper .container .profile-img {
     height: 50%;
