@@ -116,10 +116,7 @@ dist
 .pnp.*
 
 #sass 
-./public/sass/sass-cache/
-**/.css.map
-*.scss.map
+./public/sass/.sass-cache/
 .sass-cache/
-sass-cache 
-css.map
-scss.map                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+./public/css/index.css.map
+index.css.map/
