@@ -1,5 +1,6 @@
-nav {
-  position: fixed;
+#nav-wrapper {
+  // position: fixed;
+  position: relative;
   background-color: black;
   z-index: 990;
   width: 100%;
@@ -19,26 +20,29 @@ nav {
     font-size: 2rem;
     font-weight: 600;
   }
+}
 
-  .nav-content {
-    width: 55%;
-    font-size: 1.3rem;
-    height: 100%;
-    // FLEX-CENTER-EVEN
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.nav-content {
+  width: 50%;
+  font-size: 1.3rem;
+  height: 100%;
+  // FLEX-CENTER-EVEN
+  display: flex;
+  justify-content: space-between;
 
-    .nav-link {
-      text-decoration: none;
-      color: white;
-      cursor: pointer;
-      outline: none;
-      &:hover,
-      &:focus {
-        border-bottom: 1px solid white;
-        padding-bottom: 5px;
-      }
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    width: fit-content;
+    outline: none;
+    transition: all 0.4s linear;
+    &:hover,
+    &:focus {
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      border-bottom: 1px solid white;
+      padding-bottom: 5px;
     }
   }
 }
@@ -98,8 +102,9 @@ nav {
 }
 
 @media screen and (max-width: 769px) {
-  nav {
+  #nav-wrapper {
     padding: 4% 10%;
+    position: relative;
     .nav-content {
       width: 100%;
       position: absolute;
@@ -125,5 +130,23 @@ nav {
     position: absolute;
     top: 20px;
     right: 20px;
+  }
+}
+
+.nav-onscroll-style {
+  position: fixed;
+  background-color: white;
+  box-shadow: inset 4px 4px 7px rgba(0, 0, 0, 0.4),
+    inset -4px -4px 7px rgba(0, 0, 0, 0.4);
+  .brand-logo {
+    color: black;
+  }
+  .nav-link {
+    color: black;
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid black;
+      padding-bottom: 5px;
+    }
   }
 }

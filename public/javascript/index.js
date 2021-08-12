@@ -20,3 +20,14 @@ const resumeBtn = document.getElementById("download_resume");
 resumeBtn.addEventListener("click", () => {
   window.open("/download");
 });
+
+// NAV RESPONSE
+const navbar = document.getElementById("nav-wrapper");
+window.addEventListener("scroll", () => {
+  const navheight = navbar.getBoundingClientRect().height;
+  if (window.pageYOffset > navheight) {
+    navbar.classList.add("nav-onscroll-style");
+  } else {
+    navbar.classList.remove("nav-onscroll-style");
+  }
+});
