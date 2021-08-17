@@ -20,3 +20,14 @@ const resumeBtn = document.getElementById("download_resume");
 resumeBtn.addEventListener("click", () => {
   window.open("/download");
 });
+
+// LOADER
+const loader = document.querySelector(".loader-wrapper");
+window.addEventListener("load", () => {
+  const content = document.querySelector(".body-wrapper");
+  loader.classList.add("hidden");
+  setTimeout(() => {
+    loader.style.display = "none";
+    content.classList.remove("hideBody");
+  }, 1000);
+});
