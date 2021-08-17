@@ -178,7 +178,59 @@ select {
   position: relative;
 }
 
+.body-wrapper.hideBody {
+  // visibility: hidden;
+  display: none;
+}
+
 button,
 a {
   cursor: pointer;
+}
+
+// LOADER
+.loader-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: #16191e;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .load-text {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .loader {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #45474b;
+    border-width: 1em;
+    border-top-color: #2a88e6;
+    animation: spinner 1s infinite linear;
+  }
+}
+
+.loader-wrapper.hidden {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
