@@ -1,6 +1,5 @@
 #nav-wrapper {
-  // position: fixed;
-  position: relative;
+  position: fixed;
   background-color: black;
   z-index: 990;
   width: 100%;
@@ -13,35 +12,35 @@
 
   .brand-logo {
     // FLEX CENTER
-    display: flex;
     color: white;
-    align-items: center;
     height: 100%;
+    text-align: center;
     font-size: 2rem;
     font-weight: 600;
   }
 }
 
 .nav-content {
-  width: 50%;
   font-size: 1.3rem;
-  height: 100%;
   // FLEX-CENTER-EVEN
   display: flex;
-  justify-content: space-between;
+
+  li {
+    margin: 0px 40px;
+    width: 130px;
+    text-align: center;
+  }
 
   .nav-link {
     text-decoration: none;
     color: white;
     cursor: pointer;
-    width: fit-content;
-    outline: none;
-    transition: all 0.4s linear;
+    transition: all 0.2s linear;
     &:hover,
     &:focus {
-      letter-spacing: 1.5px;
+      letter-spacing: 1px;
       font-weight: 600;
-      border-bottom: 1px solid white;
+      border-bottom: 0.8px solid white;
       padding-bottom: 5px;
     }
   }
@@ -101,10 +100,30 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .nav-content {
+    li {
+      width: 110px;
+      margin: 0px 10px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-content {
+    li {
+      width: 100px;
+      margin: 0px 5px;
+      font-size: 18px;
+    }
+  }
+}
+
 @media screen and (max-width: 769px) {
   #nav-wrapper {
-    padding: 4% 10%;
-    position: relative;
+    padding: 2% 10%;
+    position: fixed;
     .nav-content {
       width: 100%;
       position: absolute;
@@ -130,23 +149,5 @@
     position: absolute;
     top: 20px;
     right: 20px;
-  }
-}
-
-.nav-onscroll-style {
-  position: fixed;
-  background-color: white;
-  box-shadow: inset 4px 4px 7px rgba(0, 0, 0, 0.4),
-    inset -4px -4px 7px rgba(0, 0, 0, 0.4);
-  .brand-logo {
-    color: black;
-  }
-  .nav-link {
-    color: black;
-    &:hover,
-    &:focus {
-      border-bottom: 1px solid black;
-      padding-bottom: 5px;
-    }
   }
 }
