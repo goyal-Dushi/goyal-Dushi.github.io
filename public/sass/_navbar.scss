@@ -1,4 +1,4 @@
-nav {
+#nav-wrapper {
   position: fixed;
   background-color: black;
   z-index: 990;
@@ -12,33 +12,36 @@ nav {
 
   .brand-logo {
     // FLEX CENTER
-    display: flex;
     color: white;
-    align-items: center;
     height: 100%;
+    text-align: center;
     font-size: 2rem;
     font-weight: 600;
   }
+}
 
-  .nav-content {
-    width: 55%;
-    font-size: 1.3rem;
-    height: 100%;
-    // FLEX-CENTER-EVEN
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.nav-content {
+  font-size: 1.3rem;
+  // FLEX-CENTER-EVEN
+  display: flex;
 
-    .nav-link {
-      text-decoration: none;
-      color: white;
-      cursor: pointer;
-      outline: none;
-      &:hover,
-      &:focus {
-        border-bottom: 1px solid white;
-        padding-bottom: 5px;
-      }
+  li {
+    margin: 0px 40px;
+    width: 130px;
+    text-align: center;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    &:hover,
+    &:focus {
+      letter-spacing: 1px;
+      font-weight: 600;
+      border-bottom: 0.8px solid white;
+      padding-bottom: 5px;
     }
   }
 }
@@ -97,9 +100,30 @@ nav {
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .nav-content {
+    li {
+      width: 110px;
+      margin: 0px 10px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-content {
+    li {
+      width: 100px;
+      margin: 0px 5px;
+      font-size: 18px;
+    }
+  }
+}
+
 @media screen and (max-width: 769px) {
-  nav {
-    padding: 4% 10%;
+  #nav-wrapper {
+    padding: 2% 10%;
+    position: fixed;
     .nav-content {
       width: 100%;
       position: absolute;

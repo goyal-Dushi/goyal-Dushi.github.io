@@ -175,6 +175,7 @@ select {
 
 .body-wrapper {
   position: relative;
+  overflow-x: hidden;
 }
 
 .body-wrapper.hideBody {
@@ -184,6 +185,19 @@ select {
 button,
 a {
   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: white;
+  box-shadow: inset 0 0 5px lightgrey;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .loader-wrapper {
@@ -239,30 +253,34 @@ nav {
   padding: 2% 10%;
   z-index: 998;
 }
-nav .brand-logo {
-  display: flex;
+#nav-wrapper .brand-logo {
   color: white;
-  align-items: center;
   height: 100%;
+  text-align: center;
   font-size: 2rem;
   font-weight: 600;
 }
-nav .nav-content {
-  width: 55%;
+
+.nav-content {
   font-size: 1.3rem;
-  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
 }
-nav .nav-content .nav-link {
+.nav-content li {
+  margin: 0px 40px;
+  width: 130px;
+  text-align: center;
+}
+.nav-content .nav-link {
   text-decoration: none;
   color: white;
   cursor: pointer;
-  outline: none;
+  transition: all 0.2s linear;
 }
-nav .nav-content .nav-link:hover, nav .nav-content .nav-link:focus {
-  border-bottom: 1px solid white;
+.nav-content .nav-link:hover,
+.nav-content .nav-link:focus {
+  letter-spacing: 1px;
+  font-weight: 600;
+  border-bottom: 0.8px solid white;
   padding-bottom: 5px;
 }
 
@@ -316,11 +334,26 @@ nav .nav-content .nav-link:hover, nav .nav-content .nav-link:focus {
   background-color: inherit;
 }
 
-@media screen and (max-width: 769px) {
-  nav {
-    padding: 4% 10%;
+@media screen and (max-width: 1440px) {
+  .nav-content li {
+    width: 110px;
+    margin: 0px 10px;
+    font-size: 20px;
   }
-  nav .nav-content {
+}
+@media screen and (max-width: 1024px) {
+  .nav-content li {
+    width: 100px;
+    margin: 0px 5px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 769px) {
+  #nav-wrapper {
+    padding: 2% 10%;
+    position: fixed;
+  }
+  #nav-wrapper .nav-content {
     width: 100%;
     position: absolute;
     right: -100%;
@@ -348,135 +381,160 @@ nav .nav-content .nav-link:hover, nav .nav-content .nav-link:focus {
 .intro-wrapper {
   position: relative;
   width: 100%;
+  height: 100vh;
+  padding: 0 8%;
   background-color: black;
-  padding: 100px 0;
   height: 100vh;
   display: flex;
   justify-content: center;
 }
-.intro-wrapper .container {
+.intro-wrapper .intro-container {
   width: 100%;
-  position: relative;
-  overflow: hidden;
-  padding: 0 10%;
+  height: auto;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 .intro-wrapper .profile-img {
-  width: 40%;
+  width: 50%;
   height: 100%;
-  text-align: center;
-  overflow: hidden;
+  background-image: url("../images/MyImage.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
-.intro-wrapper .profile-img img {
-  margin-top: 10%;
-  margin-right: 8%;
-  height: 85%;
-  width: 70%;
-}
-.intro-wrapper .content {
-  width: 60%;
+.intro-wrapper .content-wrapper {
+  width: 50%;
   height: 100%;
   color: white;
-  padding: 15% 30px 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.intro-wrapper .content h1 {
+.intro-wrapper .content-wrapper .content-container {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.intro-wrapper .content-wrapper h1 {
   text-transform: uppercase;
   font-size: 4rem;
   text-align: center;
 }
-.intro-wrapper .content p {
-  margin: 20px 0px;
+.intro-wrapper .content-wrapper p {
+  line-height: 1.5;
   font-size: 1.5rem;
+  width: 70%;
   text-align: center;
 }
-.intro-wrapper .content .btn-container {
+.intro-wrapper .content-wrapper .btn-container {
   width: 100%;
   height: auto;
-  margin-top: 4%;
   text-align: center;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
-.intro-wrapper .content .btn-container a {
+.intro-wrapper .content-wrapper .btn-container a {
   text-decoration: none;
   padding: 10px 20px;
   font-weight: 600;
   color: white;
   font-size: 1.2rem;
-  outline: white;
-  outline-style: solid;
-  outline-width: 1px;
+  outline: none;
+  border: 1px solid white;
   margin: 15px 20px;
   transition: all 0.4s linear;
 }
-.intro-wrapper .content .btn-container a:hover,
-.intro-wrapper .content .btn-container a:focus {
+.intro-wrapper .content-wrapper .btn-container a:hover,
+.intro-wrapper .content-wrapper .btn-container a:focus {
   background-color: white;
   color: black;
 }
 
 @media screen and (max-width: 1250px) {
-  .intro-wrapper .container {
+  .intro-wrapper .intro-container {
     padding: 0 0;
+    justify-content: space-between;
   }
   .intro-wrapper .profile-img {
     width: 40%;
+    height: 85%;
   }
-  .intro-wrapper .profile-img img {
-    height: 80%;
-    width: 80%;
-    margin-top: 0%;
-  }
-  .intro-wrapper .content {
+  .intro-wrapper .content-wrapper {
     width: 60%;
+  }
+  .intro-wrapper .content-wrapper .content-container h1 {
+    font-size: 3.5rem;
+  }
+  .intro-wrapper .content-wrapper .content-container p {
+    font-size: 1.25rem;
+  }
+  .intro-wrapper .content-wrapper .content-container .btn-container a {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .intro-container .profile-img {
+    height: 70%;
+    width: 35%;
+  }
+  .intro-container .content-wrapper {
+    width: 65%;
+  }
+  .intro-container .content-wrapper .btn-container {
+    justify-content: space-around;
+  }
+  .intro-container .content-wrapper .btn-container a {
+    line-height: 1.25;
   }
 }
 @media screen and (max-width: 768px) {
   .intro-wrapper {
-    height: auto;
+    padding: 0;
   }
-  .intro-wrapper .container {
+  .intro-wrapper .intro-container {
     flex-direction: column;
     align-items: center;
-    padding: 0 8%;
+    padding: 0 10%;
   }
-  .intro-wrapper .container .profile-img {
-    width: 420px;
-    height: 450px;
+  .intro-wrapper .intro-container .profile-img {
+    width: 100%;
+    margin-top: 20px;
+    height: 420px;
   }
-  .intro-wrapper .container .profile-img img {
-    height: 100%;
-    width: 60%;
+  .intro-wrapper .intro-container .content-wrapper {
+    width: 100%;
+    height: 400px;
   }
-  .intro-wrapper .container .content {
-    width: auto;
-    height: auto;
-    padding: 30px 20px;
+  .intro-wrapper .intro-container .content-wrapper h1 {
+    font-size: 3rem;
+  }
+  .intro-wrapper .intro-container .content-wrapper p {
+    line-height: 1.3;
+  }
+  .intro-wrapper .intro-container .content-wrapper .btn-container a {
+    padding: 8px 15px;
   }
 }
 @media screen and (max-width: 425px) {
-  .intro-wrapper .container .profile-img {
-    height: 50%;
+  .intro-wrapper {
+    flex-direction: column;
+  }
+  .intro-wrapper .intro-container .content-container h1 {
+    font-size: 2.5rem;
+  }
+  .intro-wrapper .intro-container .content-container p {
+    font-size: 1rem;
     width: 100%;
   }
-  .intro-wrapper .container .profile-img img {
-    height: 90%;
-    width: 80%;
-  }
-  .intro-wrapper .container .content h1 {
-    font-size: 3rem;
-  }
-  .intro-wrapper .container .content p {
-    font-size: 1.2rem;
-  }
-  .intro-wrapper .container .content .btn-container a {
-    font-size: 0.9rem;
+  .intro-wrapper .intro-container .content-container .btn-container a {
+    font-size: 0.8rem;
+    margin: 0 5px;
+    padding: 5px 10px;
   }
 }
 .skill-section {
@@ -592,6 +650,7 @@ footer p {
 .modal-wrapper .modal-close {
   position: relative;
   width: 50px;
+  cursor: pointer;
   display: flex;
   background-color: black;
   margin-left: 90%;
