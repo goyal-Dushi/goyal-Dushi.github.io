@@ -178,6 +178,10 @@ select {
   overflow-x: hidden;
 }
 
+.body-wrapper.hideBody {
+  display: none;
+}
+
 button,
 a {
   cursor: pointer;
@@ -196,7 +200,49 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#nav-wrapper {
+.loader-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: #16191e;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loader-wrapper .load-text {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 10px;
+}
+.loader-wrapper .loader {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #45474b;
+  border-width: 1em;
+  border-top-color: #2a88e6;
+  animation: spinner 1s infinite linear;
+}
+
+.loader-wrapper.hidden {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+nav {
   position: fixed;
   background-color: black;
   z-index: 990;
@@ -230,7 +276,8 @@ a {
   cursor: pointer;
   transition: all 0.2s linear;
 }
-.nav-content .nav-link:hover, .nav-content .nav-link:focus {
+.nav-content .nav-link:hover,
+.nav-content .nav-link:focus {
   letter-spacing: 1px;
   font-weight: 600;
   border-bottom: 0.8px solid white;
