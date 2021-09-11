@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+require("dotenv").config();
 
 const app = express();
 app.use(express.json());
@@ -21,6 +22,6 @@ app.get("/download", function (req, res) {
   );
 });
 
-app.listen(TEST_PORT, () => {
+app.listen(process.env.PORT || TEST_PORT, () => {
   console.log("Server started on Port 8080");
 });
