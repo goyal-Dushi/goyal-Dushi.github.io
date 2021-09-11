@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const path = require("path");
 
@@ -6,6 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname + "/public")));
+const TEST_PORT = 8080;
 
 app.get("/", function (req, res) {
   res.sendFile("/index.html");
@@ -21,6 +21,6 @@ app.get("/download", function (req, res) {
   );
 });
 
-app.listen(process.env.PORT || 8080, () => {
+app.listen(TEST_PORT, () => {
   console.log("Server started on Port 8080");
 });
