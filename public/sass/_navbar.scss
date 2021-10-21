@@ -1,14 +1,13 @@
 #nav-wrapper {
   position: fixed;
   background-color: black;
-  z-index: 990;
+  z-index: 1;
   width: 100%;
   // FLEX-CENTER-B/W
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2% 10%;
-  z-index: 998;
 
   .brand-logo {
     // FLEX CENTER
@@ -129,7 +128,7 @@
       position: absolute;
       right: -100%;
       top: 0;
-      height: 85vh;
+      height: 100vh;
       transition: all 0.4s linear;
       // FLEX-CENTER-EVEN
       display: flex;
