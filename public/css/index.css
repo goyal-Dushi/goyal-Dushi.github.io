@@ -242,16 +242,15 @@ a {
     visibility: hidden;
   }
 }
-nav {
+#nav-wrapper {
   position: fixed;
   background-color: black;
-  z-index: 990;
+  z-index: 1;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2% 10%;
-  z-index: 998;
 }
 #nav-wrapper .brand-logo {
   color: white;
@@ -276,8 +275,7 @@ nav {
   cursor: pointer;
   transition: all 0.2s linear;
 }
-.nav-content .nav-link:hover,
-.nav-content .nav-link:focus {
+.nav-content .nav-link:hover, .nav-content .nav-link:focus {
   letter-spacing: 1px;
   font-weight: 600;
   border-bottom: 0.8px solid white;
@@ -358,7 +356,7 @@ nav {
     position: absolute;
     right: -100%;
     top: 0;
-    height: 85vh;
+    height: 100vh;
     transition: all 0.4s linear;
     display: flex;
     justify-content: space-evenly;
@@ -398,7 +396,7 @@ nav {
 .intro-wrapper .profile-img {
   width: 50%;
   height: 100%;
-  background-image: url("../images/MyImage.png");
+  background-image: url("../images/MyImage.webp");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -819,6 +817,23 @@ footer p {
   justify-content: space-around;
 }
 
+.sports-wrapper {
+  padding: 5% 0%;
+  width: 100%;
+  position: relative;
+}
+
+.sports-container {
+  width: 100%;
+  height: max-content;
+  padding: 3% 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
 .certi-img {
   display: flex;
   height: auto;
@@ -858,6 +873,8 @@ footer p {
 }
 .sports-wrapper .certi-img {
   box-shadow: 8px 8px 12px 8px rgba(0, 0, 0, 0.5);
+  margin: 0 2.5%;
+  height: fit-content;
 }
 
 @media screen and (max-width: 600px) {
