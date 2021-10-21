@@ -20,17 +20,17 @@ const skills = [
   },
   {
     id: 4,
-    imgSrc: imgUrl + "javascript.png",
+    imgSrc: imgUrl + "javascript.webp",
     name: "Javascript",
   },
   {
     id: 5,
-    imgSrc: imgUrl + "html.jpg",
+    imgSrc: imgUrl + "html.webp",
     name: "HTML 5",
   },
   {
     id: 6,
-    imgSrc: imgUrl + "css.jpg",
+    imgSrc: imgUrl + "css.webp",
     name: "CSS 3",
   },
   {
@@ -45,12 +45,12 @@ const skills = [
   },
   {
     id: 9,
-    imgSrc: imgUrl + "mongodb.jpg",
+    imgSrc: imgUrl + "mongodb.webp",
     name: "MongoDB",
   },
   {
     id: 10,
-    imgSrc: imgUrl + "nodejs.jpg",
+    imgSrc: imgUrl + "nodejs.webp",
     name: "Node JS",
   },
   {
@@ -218,9 +218,8 @@ const coursesContainer = document.querySelector(".courses-container");
 let courseList = courses
   .map((course) => {
     return `
-
     <div class="certi-img">
-    <img src=${course.imgSrc} height="170px" width="220px" >
+    <img src=${course.imgSrc} height="170px" width="210px" >
     <button type="button" class="img-modal-btn" name=${course.id_name} value=${
       course.id
     } > OPEN </button>
