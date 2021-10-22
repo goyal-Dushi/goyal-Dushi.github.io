@@ -36,6 +36,23 @@
   justify-content: space-around;
 }
 
+.sports-wrapper {
+  padding: 5% 0%;
+  width: 100%;
+  position: relative;
+}
+
+.sports-container {
+  width: 100%;
+  height: max-content;
+  padding: 3% 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
 .certi-img {
   display: flex;
   height: auto;
@@ -77,6 +94,8 @@
 
   .certi-img {
     box-shadow: 8px 8px 12px 8px rgba(0, 0, 0, 0.5);
+    margin: 0 2.5%;
+    height: fit-content;
   }
 }
 

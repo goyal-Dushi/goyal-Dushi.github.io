@@ -16,17 +16,17 @@
   },
   {
     "id": 4,
-    "imgSrc": "./images/icons/javascript.png",
+    "imgSrc": "./images/icons/javascript.webp",
     "name": "Javascript"
   },
   {
     "id": 5,
-    "imgSrc": "./images/icons/html.jpg",
+    "imgSrc": "./images/icons/html.webp",
     "name": "HTML 5"
   },
   {
     "id": 6,
-    "imgSrc": "./images/icons/css.jpg",
+    "imgSrc": "./images/icons/css.webp",
     "name": "CSS 3"
   },
   {
@@ -41,12 +41,12 @@
   },
   {
     "id": 9,
-    "imgSrc": "./images/icons/mongodb.jpg",
+    "imgSrc": "./images/icons/mongodb.webp",
     "name": "MongoDB"
   },
   {
     "id": 10,
-    "imgSrc": "./images/icons/nodejs.jpg",
+    "imgSrc": "./images/icons/nodejs.webp",
     "name": "Node JS"
   },
   {
