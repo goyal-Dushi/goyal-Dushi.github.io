@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "imgSrc": "./images/icons/c2.jpg",
+    "name": "C Programming"
+  },
+  {
+    "id": 2,
+    "imgSrc": "./images/icons/react.png",
+    "name": "React"
+  },
+  {
+    "id": 3,
+    "imgSrc": "./images/icons/java1.png",
+    "name": "Java"
+  },
+  {
+    "id": 4,
+    "imgSrc": "./images/icons/javascript.png",
+    "name": "Javascript"
+  },
+  {
+    "id": 5,
+    "imgSrc": "./images/icons/html.jpg",
+    "name": "HTML 5"
+  },
+  {
+    "id": 6,
+    "imgSrc": "./images/icons/css.jpg",
+    "name": "CSS 3"
+  },
+  {
+    "id": 7,
+    "imgSrc": "./images/icons/bootstrap2.jpg",
+    "name": "Bootstrap"
+  },
+  {
+    "id": 8,
+    "imgSrc": "./images/icons/redux.png",
+    "name": "Redux"
+  },
+  {
+    "id": 9,
+    "imgSrc": "./images/icons/mongodb.jpg",
+    "name": "MongoDB"
+  },
+  {
+    "id": 10,
+    "imgSrc": "./images/icons/nodejs.jpg",
+    "name": "Node JS"
+  },
+  {
+    "id": 11,
+    "imgSrc": "./images/icons/sass.png",
+    "name": "SASS"
+  },
+  {
+    "id": 12,
+    "imgSrc": "./images/icons/next.png",
+    "name": "Next js"
+  }
+]
