@@ -106,15 +106,6 @@ getSkills();
 
 // HANDLING Co-Curricular CERTIFICATES
 const sportsContainer = document.querySelector(".sports-container");
-const openSportModal = document.querySelectorAll(
-  ".sports-container .img-modal-btn"
-);
-const sportModal = document.querySelectorAll(
-  ".sports-container .modal-wrapper"
-);
-const closeSportModal = document.querySelectorAll(
-  ".sports-container .modal-close"
-);
 
 let cocurricular;
 const getCocurrucular = async () => {
@@ -141,6 +132,16 @@ const getCocurrucular = async () => {
     }, [])
     .join("");
   sportsContainer.innerHTML = extrasList;
+
+  const openSportModal = document.querySelectorAll(
+    ".sports-container .img-modal-btn"
+  );
+  const sportModal = document.querySelectorAll(
+    ".sports-container .modal-wrapper"
+  );
+  const closeSportModal = document.querySelectorAll(
+    ".sports-container .modal-close"
+  );
 
   openSportModal.forEach((btn) => {
     btn.addEventListener("click", (e) => {
