@@ -3,14 +3,12 @@
   background-color: black;
   z-index: 1;
   width: 100%;
-  // FLEX-CENTER-B/W
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 10%;
+  padding: 2% 5%;
 
   .brand-logo {
-    // FLEX CENTER
     color: white;
     height: 100%;
     text-align: center;
@@ -21,12 +19,13 @@
 
 .nav-content {
   font-size: 1.3rem;
-  // FLEX-CENTER-EVEN
+  width: 50%;
   display: flex;
+  justify-content: space-around;
 
   li {
     margin: 0px 40px;
-    width: 130px;
+    width: fit-content;
     text-align: center;
   }
 
@@ -37,7 +36,7 @@
     transition: all 0.2s linear;
     &:hover,
     &:focus {
-      letter-spacing: 1px;
+      transform: scale(2);
       font-weight: 600;
       border-bottom: 0.8px solid white;
       padding-bottom: 5px;
@@ -81,16 +80,19 @@
   padding: 5% 0%;
   width: 50px;
   display: none;
+  border-left: 1px solid white;
 
   .close-line {
     width: 30px;
     height: 4px;
-    transform: rotateZ(-45deg);
+    transform: rotateZ(45deg);
     background-color: white;
 
     &::after {
       content: "";
       position: absolute;
+      left: 14px;
+      top: 14px;
       transform: rotateZ(-90deg);
       width: 30px;
       height: 4px;
@@ -102,7 +104,6 @@
 @media screen and (max-width: 1440px) {
   .nav-content {
     li {
-      width: 110px;
       margin: 0px 10px;
       font-size: 20px;
     }
@@ -112,7 +113,6 @@
 @media screen and (max-width: 1024px) {
   .nav-content {
     li {
-      width: 100px;
       margin: 0px 5px;
       font-size: 18px;
     }
@@ -121,7 +121,7 @@
 
 @media screen and (max-width: 769px) {
   #nav-wrapper {
-    padding: 2% 10%;
+    padding: 3% 10%;
     position: fixed;
     .nav-content {
       width: 100%;
@@ -130,12 +130,14 @@
       top: 0;
       height: 100vh;
       transition: all 0.4s linear;
-      // FLEX-CENTER-EVEN
       display: flex;
-      justify-content: space-evenly;
       align-items: center;
       flex-direction: column;
       background-color: black;
+      .nav-link{
+        padding: 10px 20px;
+        font-size: 1.4rem;
+      }
     }
   }
 
@@ -144,9 +146,10 @@
   }
 
   .close-icon {
-    display: block;
+    display: flex;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    align-items: center;
+    justify-content: center;
+    right: 10px;
   }
 }
