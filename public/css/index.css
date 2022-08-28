@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Silkscreen&display=swap");
 html,
 body,
 div,
@@ -80,6 +82,7 @@ video {
 body {
   line-height: 1;
   overflow-x: hidden;
+  font-family: "Work Sans", sans-serif;
   overflow-y: scroll;
 }
 
@@ -170,7 +173,6 @@ select {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
 }
 
 .body-wrapper {
@@ -197,7 +199,7 @@ a {
   background-color: black;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .loader-wrapper {
@@ -250,7 +252,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 10%;
+  padding: 2% 5%;
 }
 #nav-wrapper .brand-logo {
   color: white;
@@ -262,11 +264,13 @@ a {
 
 .nav-content {
   font-size: 1.3rem;
+  width: 50%;
   display: flex;
+  justify-content: space-around;
 }
 .nav-content li {
   margin: 0px 40px;
-  width: 130px;
+  width: fit-content;
   text-align: center;
 }
 .nav-content .nav-link {
@@ -276,7 +280,7 @@ a {
   transition: all 0.2s linear;
 }
 .nav-content .nav-link:hover, .nav-content .nav-link:focus {
-  letter-spacing: 1px;
+  transform: scale(2);
   font-weight: 600;
   border-bottom: 0.8px solid white;
   padding-bottom: 5px;
@@ -316,16 +320,19 @@ a {
   padding: 5% 0%;
   width: 50px;
   display: none;
+  border-left: 1px solid white;
 }
 .close-icon .close-line {
   width: 30px;
   height: 4px;
-  transform: rotateZ(-45deg);
+  transform: rotateZ(45deg);
   background-color: white;
 }
 .close-icon .close-line::after {
   content: "";
   position: absolute;
+  left: 14px;
+  top: 14px;
   transform: rotateZ(-90deg);
   width: 30px;
   height: 4px;
@@ -334,21 +341,19 @@ a {
 
 @media screen and (max-width: 1440px) {
   .nav-content li {
-    width: 110px;
     margin: 0px 10px;
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1024px) {
   .nav-content li {
-    width: 100px;
     margin: 0px 5px;
     font-size: 18px;
   }
 }
 @media screen and (max-width: 769px) {
   #nav-wrapper {
-    padding: 2% 10%;
+    padding: 3% 10%;
     position: fixed;
   }
   #nav-wrapper .nav-content {
@@ -359,21 +364,23 @@ a {
     height: 100vh;
     transition: all 0.4s linear;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     background-color: black;
   }
-
+  #nav-wrapper .nav-content .nav-link {
+    padding: 10px 20px;
+    font-size: 1.4rem;
+  }
   .open-icon {
     display: block;
   }
-
   .close-icon {
-    display: block;
+    display: flex;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    align-items: center;
+    justify-content: center;
+    right: 10px;
   }
 }
 .intro-wrapper {
@@ -381,7 +388,7 @@ a {
   width: 100%;
   height: 100vh;
   padding: 0 8%;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -418,15 +425,16 @@ a {
   align-items: center;
 }
 .intro-wrapper .content-wrapper h1 {
-  text-transform: uppercase;
   font-size: 4rem;
   text-align: center;
+  font-family: "Homemade Apple", cursive;
 }
 .intro-wrapper .content-wrapper p {
   line-height: 1.5;
   font-size: 1.5rem;
   width: 70%;
   text-align: center;
+  font-family: "Silkscreen", cursive;
 }
 .intro-wrapper .content-wrapper .btn-container {
   width: 100%;
@@ -444,7 +452,6 @@ a {
   font-size: 1.2rem;
   outline: none;
   border: 1px solid white;
-  margin: 15px 20px;
   transition: all 0.4s linear;
 }
 .intro-wrapper .content-wrapper .btn-container a:hover,
@@ -456,7 +463,7 @@ a {
 @media screen and (max-width: 1250px) {
   .intro-wrapper .intro-container {
     padding: 0 0;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   .intro-wrapper .profile-img {
     width: 40%;
@@ -513,6 +520,11 @@ a {
   }
   .intro-wrapper .intro-container .content-wrapper p {
     line-height: 1.3;
+    width: 100%;
+    margin-top: 5%;
+  }
+  .intro-wrapper .intro-container .content-wrapper .btn-container {
+    margin-top: 30px;
   }
   .intro-wrapper .intro-container .content-wrapper .btn-container a {
     padding: 8px 15px;
@@ -541,7 +553,7 @@ a {
 }
 .skill-section h2 {
   font-size: 3rem;
-  text-transform: uppercase;
+  font-family: "Homemade Apple", cursive;
 }
 
 .icons-container {
@@ -577,7 +589,6 @@ a {
   .skill-section h2 {
     font-size: 2.2rem;
   }
-
   .icons-container {
     padding: 5% 0%;
   }
@@ -591,7 +602,7 @@ a {
 footer {
   width: 100%;
   overflow: hidden;
-  padding: 2.5% 10%;
+  padding: 1% 10%;
   margin-bottom: 0;
   color: white;
   display: flex;
@@ -616,7 +627,6 @@ footer .footer-nav li a {
 footer .footer-nav li a i {
   height: 28px;
   width: 28px;
-  font-family: none;
   background-color: white;
 }
 footer .footer-nav li .blue:hover {
@@ -644,15 +654,14 @@ footer p {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(6px);
   display: none;
+  align-items: center;
+  justify-content: center;
 }
 .modal-wrapper .modal-close {
   position: relative;
   width: 50px;
   cursor: pointer;
   display: flex;
-  background-color: black;
-  margin-left: 90%;
-  margin-top: 5%;
   align-items: center;
   justify-content: center;
   height: 50px;
@@ -661,7 +670,7 @@ footer p {
   width: 30px;
   height: 4px;
   transform: rotateZ(-45deg);
-  background-color: white;
+  background-color: black;
 }
 .modal-wrapper .modal-close .close-line::before {
   content: "";
@@ -673,53 +682,84 @@ footer p {
   background-color: inherit;
 }
 
-.modal-container {
-  width: 100%;
-  height: 100%;
-  padding: 0% 5%;
+.dialog {
+  width: 800px;
+  height: 600px;
+  background: white;
+  border-radius: 8px;
+}
+.dialog_header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  position: relative;
-  text-align: center;
+  justify-content: space-between;
+  padding: 2%;
+  border-bottom: 1px solid lightgray;
+  height: 15%;
 }
-.modal-container .certi-link {
-  padding: 5px 10px;
-  font-size: 1.2rem;
-  color: white;
-  text-decoration: none;
-  margin: 20px 0px;
-  border: 2px solid white;
-  border-radius: 10px;
-}
-.modal-container .certi-link:hover {
-  color: black;
-  border: 2px solid black;
-}
-.modal-container .modal-title {
-  font-size: 3rem;
+.dialog_header .modal-title {
+  font-size: 1.5rem;
   width: 100%;
   margin: 20px 0px;
   height: fit-content;
   font-weight: 600;
-  color: white;
+  color: black;
 }
-.modal-container img {
-  width: 600px;
-  height: 500px;
-  outline: black;
+.dialog_body {
+  padding: 0% 5%;
+  overflow-y: auto;
+  height: 70%;
 }
-.modal-container .modal-content {
+.dialog_body .certi-ext {
   width: 100%;
-  padding: 0 0 3%;
-  color: white;
   text-align: center;
+  margin: 8% 0px;
 }
-.modal-container .modal-content h3 {
+.dialog_body .certi-ext_link {
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.dialog_body .certi-ext_link:hover {
+  transition: all 0.2s linear;
+  background-color: black;
+  color: white;
+}
+.dialog_body .badges-wrapper, .dialog_body .learning-list {
+  width: 50%;
+}
+.dialog_body .modal-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+.dialog_body h3 {
   text-align: center;
   margin: 15px 0px;
   font-size: 2rem;
   text-transform: capitalize;
+  font-weight: 300;
+  font-family: "Silkscreen", cursive;
+}
+.dialog_footer {
+  height: 15%;
+  padding: 2% 5%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border-top: 1px solid lightgray;
+}
+.dialog_footer p {
+  cursor: pointer;
+  margin: 0;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.modal-img img {
+  width: 100%;
+  outline: black;
 }
 
 .badges {
@@ -731,7 +771,7 @@ footer p {
   border: none;
   border-radius: 20px;
   padding: 8px 12px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
   margin: 5px 10px;
   background-color: black;
@@ -739,44 +779,49 @@ footer p {
 
 .learning-list ol {
   padding-left: 20px;
-  font-size: 2rem;
-  font-weight: 600;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
 .learning-list ol li {
   margin-top: 10px;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
 }
 
 @media screen and (max-width: 768px) {
-  .modal-wrapper .modal-contianer .modal-title {
-    font-size: 2.5rem;
+  .dialog {
+    width: 600px;
+    height: auto;
   }
-  .modal-wrapper .modal-contianer img {
+  .dialog_body img {
     max-width: 400px;
     height: 300px;
   }
-
+  .dialog_body h3 {
+    font-size: 1.5rem;
+  }
   .learning-list ol li {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 600px) {
-  .modal-wrapper .modal-close {
-    margin-left: 85%;
+  .dialog {
+    width: 360px;
   }
-  .modal-wrapper .modal-container .modal-title {
-    font-size: 2rem;
+  .dialog .modal-close .close-line {
+    width: 24px;
   }
-  .modal-wrapper .modal-container .modal-content h3 {
-    font-size: 1.5rem;
+  .dialog .modal-close .close-line::before {
+    width: 24px;
+  }
+  .dialog .modal-title {
+    font-size: 1.2rem;
+  }
+  .dialog .modal-content h3 {
+    font-size: 1rem;
     padding: 0;
   }
-  .modal-wrapper .modal-container img {
-    width: 315px;
+  .dialog .modal-content li {
+    font-size: 1rem;
+    line-height: 1.4rem;
   }
 }
 .certificates-wrapper {
@@ -789,14 +834,14 @@ footer p {
 .certificates-wrapper h1 {
   font-size: 3rem;
   text-align: center;
-  text-transform: uppercase;
+  font-family: "Homemade Apple", cursive;
 }
 
 .courses-wrapper,
 .sports-wrapper,
 .arts-wrapper {
   position: relative;
-  padding: 5% 10%;
+  padding: 4% 10%;
   height: fit-content;
 }
 .courses-wrapper h2,
@@ -805,6 +850,7 @@ footer p {
   font-size: 2rem;
   text-transform: capitalize;
   text-align: center;
+  font-family: "Silkscreen", cursive;
 }
 
 .courses-container,
@@ -867,12 +913,8 @@ footer p {
   transition: all 0.5 ease-in-out;
 }
 
-.sports-wrapper {
-  background-color: rgba(34, 32, 32, 0.829);
-  color: white;
-}
 .sports-wrapper .certi-img {
-  box-shadow: 8px 8px 12px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.28);
   margin: 0 2.5%;
   height: fit-content;
 }
@@ -880,9 +922,14 @@ footer p {
 @media screen and (max-width: 600px) {
   .certificates-wrapper h1 {
     font-size: 2rem;
+    margin: 1.5rem 0;
   }
   .certificates-wrapper h2 {
     font-size: 1.5rem;
+  }
+  .certi-img img {
+    height: 120px;
+    width: 170px;
   }
 }
 

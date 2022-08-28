@@ -7,7 +7,7 @@
   h1 {
     font-size: 3rem;
     text-align: center;
-    text-transform: uppercase;
+    font-family: 'Homemade Apple', cursive;
   }
 }
 
@@ -15,13 +15,14 @@
 .sports-wrapper,
 .arts-wrapper {
   position: relative;
-  padding: 5% 10%;
+  padding: 4% 10%;
   height: fit-content;
 
   h2 {
     font-size: 2rem;
     text-transform: capitalize;
     text-align: center;
+    font-family: 'Silkscreen', cursive;
   }
 }
 
@@ -89,11 +90,8 @@
 }
 
 .sports-wrapper {
-  background-color: rgba(34, 32, 32, 0.829);
-  color: white;
-
   .certi-img {
-    box-shadow: 8px 8px 12px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.28);
     margin: 0 2.5%;
     height: fit-content;
   }
@@ -103,9 +101,16 @@
   .certificates-wrapper {
     h1 {
       font-size: 2rem;
+      margin: 1.5rem 0;
     }
     h2 {
       font-size: 1.5rem;
+    }
+  }
+  .certi-img{
+    img{
+      height: 120px;
+      width: 170px;
     }
   }
 }
