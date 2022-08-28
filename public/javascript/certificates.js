@@ -8,12 +8,11 @@ function getTask(task) {
   return `<li class="list-group-item">${task}</li>`;
 }
 
-let courses;
 const getCourses = async () => {
-  courses = await fetch("../data/courses.json")
+  const courses = await fetch("../data/courses.json")
     .then((res) => res.json())
     .then((data) => data.courseData);
-  let courseList = courses
+  const courseList = courses
     ?.map((course) => {
       return `
 
@@ -25,30 +24,42 @@ const getCourses = async () => {
     </div>
 
     <div class="modal-wrapper" data-id=${course.id}>
+      
+      <div class="dialog">
         
-        <div class="modal-close" data-modal=${course.id}>
-            <div class="close-line"></div>
-        </div>
-        
-        <div class="modal-container">
+        <div class="dialog_header">
           <div class="modal-title"> ${course.name} </div>
-          <a type="button" class="certi-link" href=${
-            course.source
-          }> View Certificate </a>
-            <div class="modal-content">
-              <h3>skills i gained</h3>
-              <div class="badges">
-                ${course.badges.map(getBadges).join("")}  
-              </div>
-              <h3>what i learned</h3>
-              <div class="learning-list">
-                <ol>
-                  ${course.tasks.map(getTask).join("")}
-                </ol>
-            </div>
+          <div class="modal-close" data-modal=${course.id}>
+            <div class="close-line"></div>
           </div>
         </div>
-
+        
+        <div class="dialog_body">
+            <div class="modal-content">
+                <div class="badges-wrapper">
+                  <h3>skills i gained</h3>
+                  <div class="badges">
+                    ${course.badges.map(getBadges).join("")}  
+                  </div>
+                </div>
+                <div class="learning-list">
+                  <h3>what i learned</h3>
+                    <ol>
+                      ${course.tasks.map(getTask).join("")}
+                    </ol>
+                </div>
+            </div>
+            <div class="certi-ext">
+              <a type="button" class="certi-ext_link" href=${course.source}> View Certificate </a>
+            </div>
+        </div>
+        
+        <div class="dialog_footer">
+          <div class="modal-close" data-modal=${course.id}>
+            <p> Close </p>
+          </div>
+        </div>
+      </div>
     </div>
   `;
     }, [])
@@ -66,7 +77,7 @@ const getCourses = async () => {
     btn.addEventListener("click", (e) => {
       courseModal.forEach((modal) => {
         if (modal.dataset.id == e.currentTarget.value) {
-          modal.style.display = "block";
+          modal.style.display = "flex";
           body.style.overflowY = "hidden";
           // break;
         }
@@ -92,10 +103,10 @@ const body = document.querySelector("body");
 // HANDLING SKILL ICONS CONTAINER
 const iconContainer = document.querySelector(".icons-container");
 
-let skills;
+
 const getSkills = async () => {
-  skills = await fetch("../data/skills.json").then((res) => res.json());
-  let skillList = skills
+  const skills = await fetch("../data/skills.json").then((res) => res.json());
+  const skillList = skills
     .map((item) => {
       return `<li><img src=${item.imgSrc} alt=${item.name} /></li>`;
     }, [])
@@ -107,27 +118,43 @@ getSkills();
 // HANDLING Co-Curricular CERTIFICATES
 const sportsContainer = document.querySelector(".sports-container");
 
-let cocurricular;
 const getCocurrucular = async () => {
-  cocurricular = await fetch("../data/extras.json").then((res) => res.json());
-  let extrasList = cocurricular
+  const cocurricular = await fetch("../data/extras.json").then((res) => res.json());
+  const extrasList = cocurricular
     .map((sport) => {
       return `
     <div class="certi-img">
       <img src=${sport.imgSrc} height="170px" width="220px" >
       <button type="button" class="img-modal-btn" name=${sport.id_name} value=${sport.id} > OPEN </button>
     </div>
+
     <div class="modal-wrapper" data-id=${sport.id}>
-    <div class="modal-close" data-modal=${sport.id}>
-          <div class="close-line"></div>
+      
+      <div class="dialog">
+        
+        <div class="dialog_header">
+          <div class="modal-title" > ${sport.name} </div>
+          <div class="modal-close" data-modal=${sport.id}>
+            <div class="close-line"></div>
+          </div>
         </div>
-      <div class="modal-container">
-        <div class="modal-title" > ${sport.name} </div>
-        <div class="modal-img">
-          <img  src=${sport.imgSrc} alt=${sport.id_name}>
+        
+        <div class="dialog_body">
+          <div class="modal-content">
+            <div class="modal-img">
+              <img  src=${sport.imgSrc} alt=${sport.id_name}>
+            </div>
+          </div>
         </div>
+
+        <div class="dialog_footer">
+          <div class="modal-close" data-modal=${sport.id}>
+            <p> Close </p>
+          </div>
+        </div>
+
       </div>
-    </div>
+   </div>
   `;
     }, [])
     .join("");
@@ -147,7 +174,7 @@ const getCocurrucular = async () => {
     btn.addEventListener("click", (e) => {
       sportModal.forEach((modal) => {
         if (modal.dataset.id == e.currentTarget.value) {
-          modal.style.display = "block";
+          modal.style.display = "flex";
           body.style.overflowY = "hidden";
         }
       });
