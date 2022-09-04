@@ -1,62 +1,63 @@
 [
   {
-    "id": 1,
     "imgSrc": "./images/icons/c2.jpg",
-    "name": "C Programming"
+    "name": "C-Programming"
   },
   {
-    "id": 2,
     "imgSrc": "./images/icons/react.png",
     "name": "React"
   },
   {
-    "id": 3,
-    "imgSrc": "./images/icons/java1.png",
-    "name": "Java"
-  },
-  {
-    "id": 4,
+
     "imgSrc": "./images/icons/javascript.webp",
     "name": "Javascript"
   },
   {
-    "id": 5,
+
     "imgSrc": "./images/icons/html.webp",
-    "name": "HTML 5"
+    "name": "HTML-5"
   },
   {
-    "id": 6,
+
     "imgSrc": "./images/icons/css.webp",
-    "name": "CSS 3"
+    "name": "CSS-3"
   },
   {
-    "id": 7,
-    "imgSrc": "./images/icons/bootstrap2.jpg",
-    "name": "Bootstrap"
-  },
-  {
-    "id": 8,
-    "imgSrc": "./images/icons/redux.png",
-    "name": "Redux"
-  },
-  {
-    "id": 9,
-    "imgSrc": "./images/icons/mongodb.webp",
-    "name": "MongoDB"
-  },
-  {
-    "id": 10,
-    "imgSrc": "./images/icons/nodejs.webp",
-    "name": "Node JS"
-  },
-  {
-    "id": 11,
+
     "imgSrc": "./images/icons/sass.png",
     "name": "SASS"
   },
   {
-    "id": 12,
+    "imgSrc": "./images/icons/bootstrap2.jpg",
+    "name": "Bootstrap"
+  },
+  {
+    "imgSrc": "./images/icons/mui.webp",
+    "name": "MaterialUI"
+  },
+  {
+    "imgSrc": "./images/icons/redux.png",
+    "name": "React-Redux"
+  },
+  {
+    "imgSrc": "./images/icons/mongodb.webp",
+    "name": "MongoDB"
+  },
+  {
+    "imgSrc": "./images/icons/nodejs.webp",
+    "name": "NodeJS"
+  },
+  {
     "imgSrc": "./images/icons/next.png",
-    "name": "Next js"
+    "name": "Nextjs"
+  },
+  {
+    "imgSrc": "./images/icons/selenium.webp",
+    "name": "Selenium-Webdriver-(Automation)"
+  },
+  {
+
+    "imgSrc": "./images/icons/cucumber.webp",
+    "name": "Cucumberjs"
   }
 ]
