@@ -1,6 +1,6 @@
 const coursesContainer = document.querySelector(".courses-container");
 
-// GETTING BADGES AND TASKS
+// GETTING BADGES AND TASKS -----------------------------
 function getBadges(badge) {
   return `<span class="badge badge-pill badge-secondary p-2 mt-3">${badge}</span>`;
 }
@@ -8,6 +8,7 @@ function getTask(task) {
   return `<li class="list-group-item">${task}</li>`;
 }
 
+// GETTING COURSES ----------------------------
 const getCourses = async () => {
   const courses = await fetch("../data/courses.json")
     .then((res) => res.json())
@@ -18,7 +19,7 @@ const getCourses = async () => {
 
     <div class="certi-img">
       <img src=${course.imgSrc} height="170px" width="220px" />
-      <button type="button" class="img-modal-btn" name=${
+      <button type="button" class="course-modal-btn" name=${
         course.id_name
       } value=${course.id} > OPEN </button>
     </div>
@@ -65,7 +66,7 @@ const getCourses = async () => {
     }, [])
     .join("");
   coursesContainer.innerHTML = courseList;
-  const openCourseModal = document.querySelectorAll(".img-modal-btn");
+  const openCourseModal = document.querySelectorAll(".course-modal-btn");
   const courseModal = document.querySelectorAll(
     ".courses-container .modal-wrapper"
   );
@@ -79,7 +80,6 @@ const getCourses = async () => {
         if (modal.dataset.id == e.currentTarget.value) {
           modal.style.display = "flex";
           body.style.overflowY = "hidden";
-          // break;
         }
       });
     });
@@ -108,7 +108,11 @@ const getSkills = async () => {
   const skills = await fetch("../data/skills.json").then((res) => res.json());
   const skillList = skills
     .map((item) => {
-      return `<li><img src=${item.imgSrc} alt=${item.name} /></li>`;
+      return `<li>
+                <abbr title=${item.name}>
+                <img src=${item.imgSrc} alt=${item.name} />
+                </abbr>
+              </li>`;
     }, [])
     .join("");
   iconContainer.innerHTML = skillList;
@@ -125,7 +129,7 @@ const getCocurrucular = async () => {
       return `
     <div class="certi-img">
       <img src=${sport.imgSrc} height="170px" width="220px" >
-      <button type="button" class="img-modal-btn" name=${sport.id_name} value=${sport.id} > OPEN </button>
+      <button type="button" class="sport-modal-btn" name=${sport.id_name} value=${sport.id} > OPEN </button>
     </div>
 
     <div class="modal-wrapper" data-id=${sport.id}>
@@ -161,7 +165,7 @@ const getCocurrucular = async () => {
   sportsContainer.innerHTML = extrasList;
 
   const openSportModal = document.querySelectorAll(
-    ".sports-container .img-modal-btn"
+    ".sports-container .sport-modal-btn"
   );
   const sportModal = document.querySelectorAll(
     ".sports-container .modal-wrapper"
