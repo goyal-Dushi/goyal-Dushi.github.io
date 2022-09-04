@@ -1,6 +1,4 @@
 .certificates-wrapper {
-  position: relative;
-  height: fit-content;
   background-color: white;
   color: black;
   padding: 4% 0% 0%;
@@ -12,8 +10,7 @@
 }
 
 .courses-wrapper,
-.sports-wrapper,
-.arts-wrapper {
+.sports-wrapper{
   position: relative;
   padding: 4% 10%;
   height: fit-content;
@@ -27,8 +24,7 @@
 }
 
 .courses-container,
-.sports-container,
-.arts-container {
+.sports-container {
   // FLEX-WRAP-CENTER
   margin: 4% 0px;
   display: flex;
@@ -39,8 +35,6 @@
 
 .sports-wrapper {
   padding: 5% 0%;
-  width: 100%;
-  position: relative;
 }
 
 .sports-container {
@@ -97,8 +91,21 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 637px) {
   .certificates-wrapper {
+    .courses-wrapper{
+      padding: 5% 0%;
+    }
+    .courses-container{
+        width: 100%;
+        height: max-content;
+        padding: 3% 0;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
     h1 {
       font-size: 2rem;
       margin: 1.5rem 0;

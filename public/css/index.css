@@ -260,6 +260,7 @@ a {
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .nav-content {
@@ -395,7 +396,7 @@ a {
 }
 .intro-wrapper .intro-container {
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -442,7 +443,7 @@ a {
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .intro-wrapper .content-wrapper .btn-container a {
   text-decoration: none;
@@ -563,17 +564,21 @@ a {
   overflow-y: hidden;
   height: fit-content;
 }
+.icons-container abbr {
+  border: none;
+  cursor: pointer;
+}
 .icons-container li {
   list-style: none;
+  margin: 0 30px;
 }
 .icons-container img {
-  height: 130px;
-  width: 130px;
+  height: 120px;
+  width: 120px;
   border: none;
-  backdrop-filter: blur(30px);
   border-radius: 50%;
-  margin: 0 30px;
-  transition: all 0.5s linear;
+  backdrop-filter: blur(30px);
+  transition: all 0.3s ease-in-out;
   box-shadow: 15px 15px 15px 5px rgba(0, 0, 0, 0.3);
 }
 .icons-container img:hover,
@@ -592,10 +597,12 @@ a {
   .icons-container {
     padding: 5% 0%;
   }
+  .icons-container li {
+    margin: 0px 20px;
+  }
   .icons-container img {
     height: 80px;
     width: 80px;
-    margin: 0px 20px;
     box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.4);
   }
 }
@@ -733,6 +740,7 @@ footer p {
 .dialog_body .modal-content {
   display: flex;
   justify-content: space-evenly;
+  padding: 20px 0px;
 }
 .dialog_body h3 {
   text-align: center;
@@ -789,7 +797,7 @@ footer p {
 @media screen and (max-width: 768px) {
   .dialog {
     width: 600px;
-    height: auto;
+    height: 500px;
   }
   .dialog_body img {
     max-width: 400px;
@@ -825,8 +833,6 @@ footer p {
   }
 }
 .certificates-wrapper {
-  position: relative;
-  height: fit-content;
   background-color: white;
   color: black;
   padding: 4% 0% 0%;
@@ -838,15 +844,13 @@ footer p {
 }
 
 .courses-wrapper,
-.sports-wrapper,
-.arts-wrapper {
+.sports-wrapper {
   position: relative;
   padding: 4% 10%;
   height: fit-content;
 }
 .courses-wrapper h2,
-.sports-wrapper h2,
-.arts-wrapper h2 {
+.sports-wrapper h2 {
   font-size: 2rem;
   text-transform: capitalize;
   text-align: center;
@@ -854,8 +858,7 @@ footer p {
 }
 
 .courses-container,
-.sports-container,
-.arts-container {
+.sports-container {
   margin: 4% 0px;
   display: flex;
   flex-wrap: wrap;
@@ -865,8 +868,6 @@ footer p {
 
 .sports-wrapper {
   padding: 5% 0%;
-  width: 100%;
-  position: relative;
 }
 
 .sports-container {
@@ -919,7 +920,20 @@ footer p {
   height: fit-content;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 637px) {
+  .certificates-wrapper .courses-wrapper {
+    padding: 5% 0%;
+  }
+  .certificates-wrapper .courses-container {
+    width: 100%;
+    height: max-content;
+    padding: 3% 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
   .certificates-wrapper h1 {
     font-size: 2rem;
     margin: 1.5rem 0;

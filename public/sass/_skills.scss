@@ -15,18 +15,23 @@
   overflow-y: hidden;
   height: fit-content;
 
+  abbr{
+    border: none;
+    cursor: pointer;
+  }
+
   li {
     list-style: none;
+    margin: 0 30px;
   }
 
   img {
-    height: 130px;
-    width: 130px;
+    height: 120px;
+    width: 120px;
     border: none;
-    backdrop-filter: blur(30px);
     border-radius: 50%;
-    margin: 0 30px;
-    transition: all 0.5s linear;
+    backdrop-filter: blur(30px);
+    transition: all 0.3s ease-in-out;
     box-shadow: 15px 15px 15px 5px rgba(0, 0, 0, 0.3);
   }
 
@@ -47,10 +52,12 @@
 
   .icons-container {
     padding: 5% 0%;
+    li{
+      margin: 0px 20px;
+    }
     img {
       height: 80px;
       width: 80px;
-      margin: 0px 20px;
       box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.4);
     }
   }
