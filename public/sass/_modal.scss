@@ -10,6 +10,7 @@
   display: none;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 
   .modal-close {
     position: relative;
@@ -39,13 +40,14 @@
   }
 }
 
-.dialog{
+.dialog {
   width: 800px;
   height: 600px;
   background: white;
   border-radius: 8px;
-  
-  &_header{
+  pointer-events: all;
+
+  &_header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -63,39 +65,37 @@
     }
   }
 
-  &_body{
-  padding: 0% 5%;
-  overflow-y: auto;
-  height: 70%;
-  
-  .certi-ext {
-    width: 100%;
-    text-align: center;
-    margin: 8% 0px;
+  &_body {
+    padding: 0% 5%;
+    overflow-y: auto;
+    height: 70%;
 
-    &_link{
-      padding: 5px 10px;
-      font-size: 1.2rem;
-      color: black;
-      text-decoration: none;
-      border: 2px solid black;
-      border-radius: 10px;
-      &:hover {
-        transition: all 0.2s linear;
-        background-color: black;
-        color: white;
+    .certi-ext {
+      width: 100%;
+      text-align: center;
+      margin: 8% 0px;
+
+      &_link {
+        padding: 5px 10px;
+        font-size: 1.2rem;
+        color: black;
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 10px;
+
+        &:hover {
+          transition: all 0.2s linear;
+          background-color: black;
+          color: white;
+        }
       }
     }
-  }
 
-  .badges-wrapper, .learning-list{
-    width: 50%;
-  }
-  .modal-content{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px 0px;
-  }
+    .modal-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
     h3 {
       text-align: center;
       margin: 15px 0px;
@@ -106,14 +106,15 @@
     }
   }
 
-  &_footer{
+  &_footer {
     height: 15%;
     padding: 2% 5%;
     display: flex;
     justify-content: end;
     align-items: center;
     border-top: 1px solid lightgray;
-    p{
+
+    p {
       cursor: pointer;
       margin: 0;
       color: black;
@@ -134,6 +135,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
   span {
     border: none;
     border-radius: 20px;
@@ -148,6 +150,7 @@
 .learning-list {
   ol {
     padding-left: 20px;
+
     li {
       margin-top: 10px;
       font-size: 1.3rem;
@@ -161,16 +164,18 @@
     width: 600px;
     height: 500px;
 
-    &_body{
+    &_body {
       img {
         max-width: 400px;
         height: 300px;
       }
-      h3{
+
+      h3 {
         font-size: 1.5rem;
       }
     }
   }
+
   .learning-list {
     ol {
       li {
@@ -185,27 +190,30 @@
 
     width: 360px;
 
-      .modal-close{
-        .close-line{
+    .modal-close {
+      .close-line {
+        width: 24px;
+
+        &::before {
           width: 24px;
-          &::before{
-            width: 24px;
-          }
         }
+      }
+    }
+
+    .modal-title {
+      font-size: 1.2rem;
+    }
+
+    .modal-content {
+      h3 {
+        font-size: 1rem;
+        padding: 0;
       }
 
-      .modal-title {
-        font-size: 1.2rem;
+      li {
+        font-size: 1rem;
+        line-height: 1.4rem;
       }
-      .modal-content {
-        h3 {
-          font-size: 1rem;
-          padding: 0;
-        }
-        li{
-          font-size: 1rem;
-          line-height: 1.4rem;
-        }
-      }
+    }
   }
 }

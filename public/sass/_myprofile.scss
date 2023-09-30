@@ -13,21 +13,13 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .profile-img {
-    width: 50%;
-    height: 100%;
-    background-image: url("../images/MyImage.webp");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    border-radius: 50%;
   }
 
   .content-wrapper {
-    width: 50%;
     height: 100%;
     color: white;
     // FLEX-COL-CENTER
@@ -49,12 +41,14 @@
       text-align: center;
       font-family: 'Homemade Apple', cursive;
     }
+
     p {
       line-height: 1.5;
       font-size: 1.5rem;
       width: 70%;
-      text-align: center; 
-      font-family: 'Silkscreen', cursive;;
+      text-align: center;
+      font-family: 'Silkscreen', cursive;
+      ;
     }
 
     .btn-container {
@@ -100,13 +94,16 @@
 
     .content-wrapper {
       width: 60%;
+
       .content-container {
         h1 {
           font-size: 3.5rem;
         }
+
         p {
           font-size: 1.25rem;
         }
+
         .btn-container {
           a {
             font-size: 1rem;
@@ -129,6 +126,7 @@
 
       .btn-container {
         justify-content: space-around;
+
         a {
           line-height: 1.25;
         }
@@ -140,6 +138,7 @@
 @media screen and (max-width: 768px) {
   .intro-wrapper {
     padding: 0;
+
     .intro-container {
       flex-direction: column;
       align-items: center;
@@ -154,16 +153,20 @@
       .content-wrapper {
         width: 100%;
         height: 400px;
+
         h1 {
           font-size: 3rem;
         }
+
         p {
           line-height: 1.3;
           width: 100%;
           margin-top: 5%;
         }
+
         .btn-container {
           margin-top: 30px;
+
           a {
             padding: 8px 15px;
           }
@@ -176,15 +179,18 @@
 @media screen and (max-width: 425px) {
   .intro-wrapper {
     flex-direction: column;
+
     .intro-container {
       .content-container {
         h1 {
           font-size: 2.5rem;
         }
+
         p {
           font-size: 1rem;
           width: 100%;
         }
+
         .btn-container a {
           font-size: 0.8rem;
           margin: 0 5px;
