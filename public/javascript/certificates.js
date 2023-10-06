@@ -19,9 +19,8 @@ const getCourses = async () => {
 
     <div class="certi-img">
       <img src=${course.imgSrc} height="170px" width="220px" />
-      <button type="button" class="course-modal-btn" name=${
-        course.id_name
-      } value=${course.id} > OPEN </button>
+      <button type="button" class="course-modal-btn" name=${course.id_name
+        } value=${course.id} > OPEN </button>
     </div>
 
     <div class="modal-wrapper" data-id=${course.id}>
@@ -144,7 +143,7 @@ const getCocurrucular = async () => {
         </div>
         
         <div class="dialog_body">
-          <div class="modal-content">
+          <div>
             <div class="modal-img">
               <img  src=${sport.imgSrc} alt=${sport.id_name}>
             </div>

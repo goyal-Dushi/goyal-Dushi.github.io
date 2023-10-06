@@ -1,183 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Dushyant</title>
-    <link type="text/css" rel="stylesheet" href="css/index.css" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   </head>
 
-  <body>
-    <div class="loader-wrapper">
-      <p class="load-text">Sorry for inconvenience, loading...</p>
-      <div class="loader"></div>
-    </div>
-    <!-- Top Intro -->
-    <div id="home" class="body-wrapper hideBody">
-      <nav id="nav-wrapper">
-        <div>
-         <a href="#home" class="brand-logo"> DG </a> 
+<head>
+  <title>Dushyant</title>
+  <link type="text/css" rel="stylesheet" href="css/index.css" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="loader-wrapper">
+    <p class="load-text">Sorry for inconvenience, loading...</p>
+    <div class="loader"></div>
+  </div>
+  <!-- Top Intro -->
+  <div id="home" class="body-wrapper hideBody">
+    <nav id="nav-wrapper">
+      <div>
+        <a href="#home" class="brand-logo"> DG </a>
+      </div>
+      <div class="open-icon">
+        <div class="line"></div>
+      </div>
+      <ul class="nav-content">
+        <div class="close-icon">
+          <div class="close-line"></div>
         </div>
-        <div class="open-icon">
-          <div class="line"></div>
-        </div>
-        <ul class="nav-content">
-          <div class="close-icon">
-            <div class="close-line"></div>
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li>
+          <a class="nav-link" target="_blank" href="https://goyal-dushi.github.io/my-projects/#/">
+            Projects
+          </a>
+        </li>
+        <li><a class="nav-link" href="#courses">Certificates</a></li>
+      </ul>
+    </nav>
+
+    <section class="intro-wrapper">
+      <div class="d-flex container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center justify-content-center">
+            <div class="d-flex align-items-center justify-content-center">
+              <img src="./images/MyImage.webp" class="profile-img" alt="profile-img" />
+            </div>
           </div>
-          <li><a class="nav-link" href="#home">Home</a></li>
-          <li><a class="nav-link" href="#skills">Skills</a></li>
-          <li>
-            <a
-              class="nav-link"
-              target="_blank"
-              href="https://goyal-dushi.github.io/my-projects/#/"
-            >
-              Projects
-            </a>
-          </li>
-          <li><a class="nav-link" href="#courses">Certificates</a></li>
-        </ul>
-      </nav>
-
-      <section class="intro-wrapper">
-        <div class="intro-container">
-          <div class="profile-img"></div>
-          <div class="content-wrapper">
-            <div class="content-container">
-              <h1>Hi Everyone!</h1>
-              <p>
-                I am Dushyant Goyal, a Web Developer and programmer aspiring to learn, explore and
-                contribute more in order to develop something substantial for
-                the society.
-              </p>
-              <div class="btn-container">
-                <!-- <a
-                  href="mailto:dushyantgoyal28@gmail.com?subject=Regarding a project named &amp;body=Here's more info."
-                  class="email-btn"
-                  target="_top"
-                  type="button"
-                  >
-                  Contact Me
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
-                  </svg>
-                </a> -->
-                <a
-                  href="https://github.com/goyal-Dushi"
-                  target="_blank"
-                  type="button"
-                  class="github-btn"
-                  >
-                  Github
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  type="button"
-                  class="resume-btn"
-                  id="download_resume"
-                  > 
-                  Resume
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-down" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z"/>
-                    <path fill-rule="evenodd" d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
-                  </svg>
-                </a>
+          <div class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center justify-content-center">
+            <div class="content-wrapper">
+              <div class="content-container">
+                <h1>Hi Everyone!</h1>
+                <p class="my-3">
+                  I am Dushyant Goyal, a Web Developer and programmer, learning, exploring and
+                  contributing more in order to develop something substantial for
+                  the society.
+                </p>
+                <div class="btn-container">
+                  <a href="https://github.com/goyal-Dushi" target="_blank" type="button" class="github-btn">
+                    Github
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-box-arrow-up-right" viewBox="0 0 16 20">
+                        <path fill-rule="evenodd"
+                          d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                        <path fill-rule="evenodd"
+                          d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                      </svg>
+                    </span>
+                  </a>
+                  <a type="button" class="resume-btn" id="download_resume">
+                    Resume
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-box-arrow-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z" />
+                        <path fill-rule="evenodd"
+                          d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Certification section -->
+    <!-- Skills section -->
 
-      <section id="courses" class="certificates-wrapper">
-        <h1>Certifications</h1>
+    <section id="skills" class="skill-section">
+      <h2>Skills</h2>
+      <ul class="icons-container"></ul>
+    </section>
 
-        <div class="courses-wrapper">
-          <h2>courses & guided projects</h2>
-          <div class="courses-container"></div>
+    <!-- Certification section -->
+
+    <section id="courses" class="certificates-wrapper">
+      <h1>Certifications</h1>
+
+      <div class="courses-wrapper">
+        <h2>courses & guided projects</h2>
+        <div class="courses-container"></div>
+      </div>
+
+      <div class="sports-wrapper">
+        <h2>Other Co-curricular Activities</h2>
+        <div class="sports-container"></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer id="footer">
+      <h3> Contact Me </h3>
+      <div class="container p-0">
+        <div class="row align-items-center">
+          <div class="col-md-6 col-sm-12">
+            <div class="img-area">
+              <img src="/images/contact_us.png" alt="contact_us" height="100%" width="100%">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="contact-form">
+              <form method="post" action="/">
+                <div class="grid-container">
+                  <div class="input-group">
+                    <label for="uname"> Name </label>
+                    <input required id="uname" autocomplete="off" placeholder="Enter your name here" name="username"
+                      type="text">
+                  </div>
+                  <div class="input-group">
+                    <label for="subject"> Subject </label>
+                    <input required id="subject" name="subject" placeholder="Enter Email Subject" autocomplete="off"
+                      type="text">
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="email"> Email </label>
+                  <input required id="email" autocomplete="off" placeholder="Your Email ID" name="email" type="email">
+                </div>
+                <div class="input-group">
+                  <label for="msg"> Message </label>
+                  <textarea required id="msg" name="message" placeholder="Enter your message here..." cols="21"
+                    rows="8"></textarea>
+                </div>
+                <button class="submit-btn" onclick="() => handleSubmit()" type="submit"> Submit </button>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="sports-wrapper">
-          <h2>Other Co-curricular Activities</h2>
-          <div class="sports-container"></div>
-        </div>
-      </section>
+      <!-- social media rack -->
+      <p class="copyright text-center">© <span></span> Dushyant Goyal</p>
+    </footer>
+  </div>
 
-      <!-- Skills section -->
+  <script src="./javascript/index.js" type="text/javascript"></script>
+  <script type="text/javascript" src="./javascript/certificates.js"></script>
+</body>
 
-      <section id="skills" class="skill-section">
-        <h2>Skills</h2>
-        <ul class="icons-container"></ul>
-      </section>
-
-      <!-- FOOTER -->
-
-      <footer id="footer">
-        <ul class="footer-nav">
-          <li>
-            <a
-              class="blue"
-              href="https://www.linkedin.com/in/dushyant-goyal"
-              target="_blank"
-            >
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABLklEQVRIie2VsUoEMRRFz1t2BUEQtFEQbS222UqxtxDxI2zs/Q5Lf8DSf7ATW7EQSwvJIgg22ggqXguDxDiY2ZkEhNnbzORNXs57kxsCU3VOknYljZVPTtJOzLEKsANWMvfjzGw1BVZm6BfI7AerVyPnCbgAXkoU9K1of54lrfn4SNJ7042OOamOb8zsDsDMroD7XA2mwCNJGwCS9shoujrm+gAegOVWoMhc/Ro5R/45Axz6Ik58bAisA8fALbAE7ANbE1dW4Qvz8Tk/vgzmbkqaj/J7ks5S5moFDnIWo/F2W1enijRJ58CjpNPg03WTxSb51cNg3qukvo8PinYMLATvA2AWwMzegD/3tS04Po6/jmcpcGN1D/yv7+MiqgKPC3BcHfBBZrjza07VMX0CG9qRFZ7Jfe0AAAAASUVORK5CYII="
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              class="blue"
-              href="https://twitter.com/dushyantgoyal28?s=09"
-              target="_blank"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="28"
-                height="28"
-                viewBox="0 0 172 172"
-                style="fill: #000000"
-              >
-                <g
-                  fill="none"
-                  fill-rule="nonzero"
-                  stroke="none"
-                  stroke-width="1"
-                  stroke-linecap="butt"
-                  stroke-linejoin="miter"
-                  stroke-miterlimit="10"
-                  stroke-dasharray=""
-                  stroke-dashoffset="0"
-                  font-family="none"
-                  font-weight="none"
-                  font-size="none"
-                  text-anchor="none"
-                  style="mix-blend-mode: normal"
-                >
-                  <path d="M0,172v-172h172v172z" fill="none"></path>
-                  <g fill="#ffffff">
-                    <path
-                      d="M127.28,10.32h-82.56c-18.96816,0 -34.4,15.43528 -34.4,34.40344v82.54968c0,18.9716 15.43184,34.40688 34.4,34.40688h82.56c18.96816,0 34.4,-15.43528 34.4,-34.40344v-82.55656c0,-18.96816 -15.43184,-34.4 -34.4,-34.4zM124.65872,70.4512c0.0344,0.81528 0.05504,1.64088 0.05504,2.47336c0,25.24272 -19.17112,54.35544 -54.22472,54.35544c-10.76032,0 -20.78104,-3.16136 -29.20904,-8.58624c1.48952,0.17888 2.99968,0.26488 4.54424,0.26488c8.93024,0 17.1484,-3.04784 23.66376,-8.17344c-8.33856,-0.15136 -15.36992,-5.68632 -17.802,-13.26808c1.16616,0.2236 2.35984,0.344 3.59136,0.344c1.7372,0 3.4228,-0.23048 5.01552,-0.67424c-8.71008,-1.76128 -15.27704,-9.47376 -15.27704,-18.73424c0,-0.08256 0,-0.16168 0,-0.2408c2.56968,1.43104 5.504,2.29448 8.63096,2.39424c-5.11872,-3.43312 -8.47616,-9.27424 -8.47616,-15.90312c0,-3.50192 0.93568,-6.78024 2.57656,-9.60792c9.40152,11.5584 23.4436,19.16424 39.27792,19.96232c-0.3268,-1.40008 -0.4988,-2.8552 -0.4988,-4.3516c0,-10.55048 8.5312,-19.10576 19.0576,-19.10576c5.47992,0 10.43008,2.31856 13.90448,6.03376c4.33784,-0.85656 8.42112,-2.44584 12.10192,-4.63368c-1.42072,4.4548 -4.44448,8.20096 -8.38328,10.56768c3.85968,-0.46784 7.52672,-1.48952 10.94952,-3.01c-2.54904,3.83216 -5.7792,7.19992 -9.49784,9.89344z"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <p class="copyright">© <span></span> Dushyant Goyal</p>
-      </footer>
-    </div>
-
-    <script src="./javascript/index.js" type="text/javascript"></script>
-    <script type="text/javascript" src="./javascript/certificates.js"></script>
-  </body>
 </html>
