@@ -1,5 +1,4 @@
-.grid-wrapper,
-.grid-container {
+.grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     overflow: hidden;
@@ -8,15 +7,8 @@
 }
 
 .contact-form {
-    border: 5px solid #fff;
-    border-radius: 18px;
-    padding: 14px 24px;
     height: fit-content;
     margin: auto;
-
-    .grid-container {
-        grid-gap: 1rem;
-    }
 
     .submit-btn {
         padding: 10px 20px;
@@ -63,4 +55,32 @@
             padding: 8px 10px;
         }
     }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form{
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin: 8px 0px;
+    
+            label {
+                font-size: 14px;
+                margin: 6px 0px 4px;
+            }
+    
+            input,
+            textarea {
+                font-size: 12px;
+                border: none;
+                border-radius: 3px;
+                padding: 4px 8px;
+            }
+        }
+
+        .submit-btn{
+            font-size: 0.7rem;
+        }
+    } 
 }

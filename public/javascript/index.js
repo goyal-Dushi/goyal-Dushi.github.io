@@ -10,7 +10,7 @@ const navWrapper = document.querySelector("#nav-wrapper");
 
 navWrapper.addEventListener("click", (e) => {
   const navHeight = navWrapper.getBoundingClientRect().height;
-  console.log("Navheight: ", navHeight);
+  
   if (
     e.target.className === "close-icon" ||
     e.target.className === "close-line"
