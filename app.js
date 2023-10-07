@@ -9,20 +9,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname + "/public")));
 const TEST_PORT = 8080;
 
-app.route('/').get(function (req, res) {
-  res.sendFile("/index.html");
-}).post((req, res) => {
-  const {email, username, subject, message} = req.body;
+async function sendEmail(body){
+  try{
+    const {email, username, subject, message} = body;
   const pwd = process.env.MAIL_PWD;
-  console.log('pwd: ',pwd);
 
-  const transporter = nodemailer.createTransport({
+  const transporter = await nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
     port: 587, // true for 465, false for other ports
     auth: {
       user: "dushyantgoyal28@gmail.com", // generated ethereal user
-      pass: "uovjwjrighazeoay", // generated ethereal password
+      pass: process.env.ETHREAL_PWD, // generated ethereal password
     },
   });
 
@@ -30,17 +28,29 @@ app.route('/').get(function (req, res) {
     from: email,
     to: "dushyantgoyal28@gmail.com",
     subject,
-    text: message
+    text: `<p> message </p>`
   };
 
-  transporter.sendMail(mailOptions, (err, info)=> {
+  await transporter.sendMail(mailOptions, (err, info)=> {
     if(err){
-      console.log(err);
+      throw Error();
     }else{
-      res.redirect('/');
-      console.log(info);
+      res.redirect('/').then(() => {
+        window.alert('Email Send Successfully!');
+      });
     }
   })
+
+  } catch(err){
+    console.error(err);
+    window.alert('Sorry, but Email could not be send. Pls try again later!');
+  }
+}
+
+app.route('/').get(function (req, res) {
+  res.sendFile("/index.html");
+}).post(async (req, res) => {
+  await sendEmail(req.body);
 });
 
 app.get("/download", function (req, res) {
