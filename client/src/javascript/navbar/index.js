@@ -1,14 +1,8 @@
-// FOOTER YEAR
-const dateText = document.querySelector(".copyright span");
-var date = new Date();
-dateText.textContent = date.getFullYear();
-
-// NAVBAR TOGGLE
 const openNav = document.querySelector(".open-icon");
 const responsiveNav = document.querySelector(".nav-content");
 const navWrapper = document.querySelector("#nav-wrapper");
 
-navWrapper.addEventListener("click", (e) => {
+navWrapper?.addEventListener("click", (e) => {
   const navHeight = navWrapper.getBoundingClientRect().height;
   
   if (
@@ -22,7 +16,7 @@ navWrapper.addEventListener("click", (e) => {
     const position = page.offsetTop;
     window.scrollTo({
       left: 0,
-      top: position - navHeight,
+      top: position+(navHeight),
     });
     responsiveNav.style.right = "-100%";
   }
@@ -32,19 +26,13 @@ openNav.addEventListener("click", () => {
   responsiveNav.style.right = "0%";
 });
 
-// Btn Resume Download
-const resumeBtn = document.getElementById("download_resume");
-resumeBtn.addEventListener("click", () => {
-  window.open("/download");
-});
+const hamburgerIcon = document.querySelector('.open-icon');
+const closeArrowIcon = document.querySelector('.close-icon');
+const morphedNavWrapper = document.querySelector('.nav-wrapper--morphed');
 
-// LOADER
-const loader = document.querySelector(".loader-wrapper");
-window.addEventListener("load", () => {
-  const content = document.querySelector(".body-wrapper");
-  loader.classList.add("hidden");
-  setTimeout(() => {
-    loader.style.display = "none";
-    content.classList.remove("hideBody");
-  }, 1000);
-});
+// hamburgerIcon?.addEventListener('click', (e) => {
+//   morphedNavWrapper?.style.backdropFilter = 'none';
+// });
+// closeArrowIcon?.addEventListener('click' , (e) => {
+//   morphedNavWrapper?.style.backdropFilter = 'blur(10px)';
+// });

@@ -1,4 +1,4 @@
-#nav-wrapper {
+.nav-wrapper {
   position: fixed;
   background-color: black;
   z-index: 1;
@@ -7,6 +7,26 @@
   justify-content: space-between;
   align-items: center;
   padding: 2% 5%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Add depth with a shadow
+
+  &--morphed {
+    background: rgba(255, 255, 255, 0.2); // Semi-transparent background
+    backdrop-filter: blur(10px); // Frosted glass effect
+    -webkit-backdrop-filter: blur(10px); // Safari compatibility
+
+    &>div>.brand-logo {
+      color: black;
+    }
+
+    &>.nav-content>li>.nav-link {
+      color: black;
+
+      &:hover,
+      &:focus {
+        border-bottom: 0.8px solid black;
+      }
+    }
+  }
 
   .brand-logo {
     color: white;
@@ -58,24 +78,6 @@
     width: 28px;
     height: 4px;
     background-color: white;
-
-    &::after {
-      content: "";
-      width: 28px;
-      height: 4px;
-      background-color: inherit;
-      position: absolute;
-      margin-top: 20px;
-    }
-
-    &::before {
-      content: "";
-      width: 28px;
-      height: 4px;
-      background-color: inherit;
-      position: absolute;
-      margin-top: 10px;
-    }
   }
 }
 
@@ -124,9 +126,16 @@
 }
 
 @media screen and (max-width: 769px) {
-  #nav-wrapper {
+
+  .nav-wrapper {
     padding: 3% 10%;
     position: fixed;
+
+    &--morphed {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px); // Frosted glass effect
+      -webkit-backdrop-filter: blur(10px);
+    }
 
     .nav-content {
       width: 100%;
@@ -138,7 +147,10 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-      background-color: black;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
 
       .nav-link {
         padding: 10px 20px;

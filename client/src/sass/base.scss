@@ -201,10 +201,12 @@ a {
 
 ::-webkit-scrollbar-thumb {
   background-color: black;
+
   &:hover {
     background-color: rgba(0, 0, 0, 0.6);
   }
 }
+
 // LOADER
 .loader-wrapper {
   height: 100vh;
@@ -215,6 +217,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 100;
 
   .load-text {
     font-size: 1.3rem;

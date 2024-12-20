@@ -6,63 +6,55 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname + "/public")));
-const TEST_PORT = 8080;
+
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static(path.join(__dirname, "/dist")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "/dist/index.html"));
+  });
+
+}
+
+const PORT = process.env.PORT || 8080;
 
 async function sendEmail(body){
   try{
-    const {email, username, subject, message} = body;
-  const pwd = process.env.MAIL_PWD;
+    const {email, subject, message} = body;
+  
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      auth: {
+        user: "dushyantgoyal28@gmail.com",
+        pass: process.env.MAIL_PWD,
+      },
+    });
 
-  const transporter = await nodemailer.createTransport({
-    service: "gmail",
-    host: "smtp.gmail.com",
-    port: 587, // true for 465, false for other ports
-    auth: {
-      user: "dushyantgoyal28@gmail.com", // generated ethereal user
-      pass: process.env.ETHREAL_PWD, // generated ethereal password
-    },
-  });
+    const mailOptions = {
+      from: email,
+      to: "dushyantgoyal28@gmail.com",
+      subject,
+      text: message,
+    };
 
-  const mailOptions = {
-    from: email,
-    to: "dushyantgoyal28@gmail.com",
-    subject,
-    text: `<p> message </p>`
-  };
-
-  await transporter.sendMail(mailOptions, (err, info)=> {
-    if(err){
-      throw Error();
-    }else{
-      res.redirect('/').then(() => {
-        window.alert('Email Send Successfully!');
-      });
-    }
-  })
-
+    await transporter.sendMail(mailOptions);
+    return { message: 'Email send successfully!' };
   } catch(err){
-    console.error(err);
-    window.alert('Sorry, but Email could not be send. Pls try again later!');
+    throw new Error({ message: 'Some issue encountered while sending email!', err });
   }
 }
 
-app.route('/').get(function (req, res) {
-  res.sendFile("/index.html");
-}).post(async (req, res) => {
-  await sendEmail(req.body);
+app.post('/api/sendEmail', async (req, res) => {
+  try{
+    const response = await sendEmail(req.body);
+    res.status(200).json(response);
+  } catch(err){
+    res.status(500).json(err);
+  }
 });
 
-app.get("/download", function (req, res) {
-  res.download(
-    __dirname + "/upload_folder/Resume.pdf",
-    "Dushyant_Resume.pdf",
-    (error) => {
-      console.log("Error :", error);
-    }
-  );
-});
-
-app.listen(process.env.PORT || TEST_PORT, () => {
-  console.log("Server started on Port 8080");
+app.listen(PORT, () => {
+  console.log("Server started on Port ", PORT);
 });
